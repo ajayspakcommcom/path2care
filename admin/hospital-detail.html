@@ -1,0 +1,248 @@
+<html class="openNav">
+
+<head>
+    <title>BSV 1: Hospital List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="admin/css/admin.css" />
+    <script src="admin/js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="primary-nav" id="loadAdminHeader"></div>
+
+    <div class="new-wrapper">
+        <div id="main">
+            <div id="main-contents">
+                <h1 class="m-b-30">Dhiru Bhai Ambani Hospital Detail</h1>
+
+                <form>
+                  <div class="container">
+                    <div class="custom-table form">
+  
+                      <div class="hospital-detail-filter">
+                        <div class="hosp-detail-input-filter">
+                          <div>
+                            <label for="from">From</label>
+                            <input type="text" id="from" name="from">
+                            <label for="to">to</label>
+                            <input type="text" id="to" name="to">
+                          </div>
+                          <div class="form">
+                            <button type="button" class="btn">Search</button>
+                          </div>
+                        </div>
+                        
+                        <div class="zone-head-work">
+                          <span>Zone Head :</span> <b>Lorem Ipsum</b> /
+                          <span>RBM :</span> <b>Lorem Ipsum</b> 
+                        </div>
+                      </div>
+                      
+
+                      <div class="hospital-detail-filter-disabled hide">
+                        <div>
+                          <input type="text" name="month" id="txtmonth">
+                          <input type="text" id="txtyear" name="txtyear" />
+                        </div>
+                      </div>
+                      
+                      <div class="hospital-grid-container">
+                        <div>
+                          <table class="table table-bordered">
+                            <tbody>
+                              <tr>
+                                <td><b>Name</b></td>
+                                <td>Thymogam</td>
+                              </tr>
+                              <tr>
+                                <td><b>Potential</b></td>
+                                <td>8000</td>
+                              </tr>
+                              <tr>
+                                <td><b>Actual</b></td>
+                                <td>
+                                  <span class="h-detail-label">10000</span>
+                                  <input type="text" name="actual" value="10000" class="h-detail-input none" id="txtmed1" />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                       <div>
+                        <table class="table table-bordered">
+                          <tbody>
+                            <tr>
+                              <td><b>Name</b></td>
+                              <td>Amphonex</td>
+                            </tr>
+                            <tr>
+                              <td><b>Potential</b></td>
+                              <td>8000</td>
+                            </tr>
+                            <tr>
+                              <td><b>Actual</b></td>
+                              <td>
+                                  <span class="h-detail-label">10000</span>
+                                  <input type="text" name="actual" value="10000" class="h-detail-input none" id="txtmed2" />
+                                </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                       </div>
+                        <div>
+                          <table class="table table-bordered">
+                            <tbody>
+                              <tr>
+                                <td><b>Name</b></td>
+                                <td>AG Cufill</td>
+                              </tr>
+                              <tr>
+                                <td><b>Potential</b></td>
+                                <td>8000</td>
+                              </tr>
+                              <tr>
+                                <td><b>Actual</b></td>
+                                <td>
+                                    <span class="h-detail-label">10000</span>
+                                    <input type="text" name="actual" value="10000" class="h-detail-input none" id="txtmed3" />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <table class="table table-bordered">
+                            <tbody>
+                              <tr>
+                                <td><b>Name</b></td>
+                                <td>U-Tryp</td>
+                              </tr>
+                              <tr>
+                                <td><b>Potential</b></td>
+                                <td>8000</td>
+                              </tr>
+                              <tr>
+                                <td><b>Actual</b></td>
+                                <td>
+                                    <span class="h-detail-label">10000</span>
+                                    <input type="text" name="actual" value="10000" class="h-detail-input none" id="txtmed4" />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div class="hosp-detail-total">
+                        <div>
+                          <span>Total Potential</span> : <b>24000</b>
+                        </div>
+                        <div>
+                          <span>Total Actual</span> : <b>40000</b> 
+                        </div>
+                      </div>
+
+                      <div class="hospi-detail-btn-wrapper">
+                        <div class="form text-right">
+                          <button type="button" class="btn addActualBtn" onclick="addActualFun()">Add Actual</button>
+                          <button type="button" class="btn saveActualBtn none" onclick="addActualFun()">Save Actual</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="loader-wrapper none">
+        <div class="loader"></div>
+    </div>
+
+    <script src="admin/js/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <!--Data Table-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css" />
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <!--Data Table-->
+
+    <script src="/admin/js/admin.js"></script>
+
+    <script>
+       
+        function getPreviousMonth(currMonth) {
+          var months= ["January","February","March","April","May","June","July", "August","September","October","November","December"];
+          return months[currMonth - 1];
+        }
+
+        function addActualFun() {
+          $('.h-detail-label').addClass('hide');
+          $('.h-detail-input').removeClass('none');
+          $('.saveActualBtn').removeClass('none');
+          $('.addActualBtn').addClass('none');
+          $('.hospital-detail-filter').addClass('none');
+          
+          $('.hospital-detail-filter-disabled').removeClass('hide');
+          
+          $('#txtmonth').val(getPreviousMonth(new Date().getMonth()));
+          $('#txtyear').val(new Date().getFullYear());
+          $('#txtmonth').attr('disabled', 'disabled');
+          $('#txtyear').attr('disabled', 'disabled');
+
+          $('#txtmed1').val(0);
+          $('#txtmed2').val(0);
+          $('#txtmed3').val(0);
+          $('#txtmed4').val(0);
+
+          $('#txtmed1').focus();
+
+        }
+
+    </script>
+
+<script>
+  $( function() {
+    var dateFormat = "mm/dd/yy",
+      from = $( "#from" )
+        .datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 3
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#to" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        numberOfMonths: 3
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( dateFormat, element.value );
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+    }
+  } );
+  </script>
+
+</body>
+
+</html>

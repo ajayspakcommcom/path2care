@@ -1,0 +1,721 @@
+[
+  {
+    "ModuleId": 1001,
+    "ModuleName": "Diabetes Science ",
+    "presentedBy": "Dr. Anjali Bhatt",
+    "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+    "subModules": [
+      {
+        "subModuleId": 2001,
+        "Name": "Physiology",
+        "presentedBy": "Dr. Anjali Bhatt",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p> ",
+        "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p> ",
+        "videoName": "Dr-Anjali-Bhatt-1.mp4",
+        "videoDuration": "5:59",
+
+        "badge": "Physiology.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "BOOK",
+            "subType": "bloodTest",
+            "question": "Diagnosis of diabetes is done when the blood glucose levels are",
+            "options": [
+              { "text": "Fasting Plasma Glucose (FPG) ≥ 126 mg/dL" },
+              {
+                "text": "2 hour Post glucose Plasma Glucose (PPG) ≥ 200 mg/dL"
+              },
+              { "text": "Random Plasma Glucose ≥ 200 mg/dL with symptoms" },
+              { "text": "Any one of the above" }
+            ],
+            "correctAnswer": "Any one of the above"
+          },
+
+          {
+            "id": 2,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "Following body organs play important role in glucose metabolism",
+            "options": [
+              { "text": "Pancreas" },
+              { "text": "Liver" },
+              { "text": "Muscle" },
+              { "text": "All of the above" }
+            ],
+            "correctAnswer": "All of the above"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "mybook",
+            "question": "Pathophysiology of diabetes involves one of following",
+            "options": [
+              { "text": "Reduced insulin sensitivity" },
+              { "text": "Reduced insulin resistance" },
+              { "text": "Increase insulin secretion capacity" },
+              { "text": "None of the above" }
+            ],
+            "correctAnswer": "Reduced insulin sensitivity"
+          },
+          {
+            "id": 4,
+            "type": "BOOK",
+            "subType": "plusbooth",
+            "question": "Ominous octate of pathophysiology of diabetes does not have one of the following",
+            "options": [
+              { "text": "Liver" },
+              { "text": "Brain" },
+              { "text": "Brain" },
+              { "text": "Foot" }
+            ],
+            "correctAnswer": "Foot"
+          }
+        ]
+      },
+      {
+        "subModuleId": 2002,
+        "Name": "Understanding complications",
+        "presentedBy": "Dr. Anjali Bhatt",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "videoName": "Dr-Anjali-Bhatt-2.mp4",
+        "videoDuration": "4:44",
+        "badge": "understandingcomplications.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 4,
+            "type": "BOOK",
+            "subType": "injection2",
+            "question": "Microvascular complications of diabetes are",
+            "options": [
+              { "text": "Retinopathy" },
+              { "text": "Neuropathy" },
+              { "text": "Nephropathy" },
+              { "text": "All of the above" }
+            ],
+            "correctAnswer": "All of the above"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "subType": "mybook",
+            "question": "One of the below is Macrovascular complication of diabetes",
+            "options": [
+              { "text": "Kidney disease" },
+              { "text": "Burning of feet" },
+              { "text": "Acute myocardial infarction" },
+              { "text": "Foot ulcer" }
+            ],
+            "correctAnswer": "Acute myocardial infarction"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "bluebox2",
+            "question": "Diabetes complications are classified as",
+            "options": [
+              { "text": "Acute and chronic complication" },
+              { "text": "Microvascular and macrovascular complication" },
+              { "text": "Both of the above" },
+              { "text": "None of the above" }
+            ],
+            "correctAnswer": "Both of the above"
+          },
+          {
+            "id": 1,
+            "type": "DART",
+            "question": "Macrovascular complications are solely associated with high blood glucose – true or false",
+            "options": [{ "text": "True" }, { "text": "False" }],
+            "correctAnswer": "False"
+          }
+        ]
+      },
+      {
+        "subModuleId": 2003,
+        "Name": "Preventing complications",
+        "presentedBy": "Dr. Anjali Bhatt",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "videoName": "Dr-Anjali-Bhatt-3.mp4",
+        "videoDuration": "5:43",
+        "badge": "preventingcomplications.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "BOOK",
+            "subType": "preventmanagement",
+            "question": "Management of high blood glucose is associated with reduction in chances of retinopathy – true or false",
+            "options": [{ "text": "True" }, { "text": "False" }],
+            "correctAnswer": "True"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "subType": "macrovascular",
+            "question": "Following factors are important to be considered for prevention of macrovascular complications of diabetes",
+            "options": [
+              { "text": "Blood glucose levels" },
+              { "text": "Cholesterol levels" },
+              { "text": "Obesity" },
+              { "text": "All of the above" }
+            ],
+            "correctAnswer": "All of the above"
+          },
+          {
+            "id": 3,
+            "type": "DOOR",
+            "question": "The evidence for remission of type 2 diabetes is available with following",
+            "subType":"preventingtheevidence",
+            "options": [
+              { "text": "Low calorie diet" },
+              { "text": "Bariatric surgery" },
+              { "text": "All of the above" }
+            ],
+            "correctAnswer": "All of the above"
+          },
+          {
+            "id": 4,
+            "type": "BOOK",
+            "subType": "emergencymanagement",
+            "question": "Emergency management of high blood glucose levels is important to prevent which one of the following complications",
+            "options": [
+              { "text": "Retinopathy" },
+              { "text": "Diabetic ketoacidosis" },
+              { "text": "Acute coronary event" },
+              { "text": "Peripheral neuroapthy" }
+            ],
+            "correctAnswer": "Diabetic ketoacidosis"
+          }
+        ]
+      },
+      {
+        "subModuleId": 2004,
+        "Name": "Sick Day Diabetes Management",
+        "presentedBy": "Dr. Anjali Bhatt",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "videoName": "Dr-Anjali-Bhatt-4.mp4",
+        "videoDuration": "3:38",
+        "badge": "sickdaydiabetesmanagement.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "BOOK",
+            "subType": "plate",
+            "question": "If a person with diabetes treated with insulin has fever and is unable to eat, what should he do",
+            "options": [
+              { "text": "Keep a close watch on blood glucose levels" },
+              { "text": "Stop taking insulin" },
+              { "text": "Double the dose of insulin" },
+              { "text": "None of the above" }
+            ],
+            "correctAnswer": "Keep a close watch on blood glucose levels"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "subType": "plusbooth1",
+            "question": "If a person taking oral tablets for management of type 2 diabetes had vomiting, what should he do?",
+            "options": [
+              { "text": "Keep taking the tablets" },
+              { "text": "Stop the tablets" },
+              { "text": "Double the dose of the tablet" },
+              { "text": "Meet his doctor" }
+            ],
+            "correctAnswer": "Meet his doctor"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "injection3",
+            "question": "A person with type 1 diabetes has vomiting and breathing difficulty it may be a sign of which of the following life-threatening complication",
+            "options": [
+              { "text": "Acute gastroenteritis" },
+              { "text": "Diabetic ketoacidosis" },
+              { "text": "Viral infection" },
+              { "text": "None of the above" }
+            ],
+            "correctAnswer": "Diabetic ketoacidosis"
+          },
+          {
+            "id": 4,
+            "type": "BOOK",
+            "subType": "sickmybook",
+            "question": "There is no difference between sick day management of type 1 diabetes and type 2 diabetes. True or False",
+            "options": [{ "text": "True" }, { "text": "False" }],
+            "correctAnswer": "False"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ModuleId": 1002,
+    "ModuleName": "Hands-on Diabetes Management",
+    "presentedBy": "Dr. Neeta Deshpande ",
+    "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+    "subModules": [
+      {
+        "subModuleId": 3001,
+
+        "Name": "Monitoring",
+        "presentedBy": "Dr. Neeta Deshpande ",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+        "videoName": "Dr-Neeta-Deshpande-video1.mp4",
+        "videoDuration": "7:00",
+        "badge": "monitoring.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "subType":"monitoringcommon",
+            "question": "Commonly used methods of monitoring include all of the following except...",
+            "options": [
+              { "text": "HbA1c" },
+              { "text": "Fructosamine" },
+              { "text": "CGMS" },
+              { "text": "SMBG" }
+            ],
+            "correctAnswer": "Fructosamine"
+          },
+          {
+            "id": 2,
+            "type": "DART",
+            "question": "Targets of monitoring differ by the age of the patient",
+            "options": [{ "text": "True" }, { "text": "False" }],
+            "correctAnswer": "True"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "The Best Way of knowing glycaemic variability is by...",
+            "options": [
+              { "text": "HbA1c" },
+              { "text": "Lab glucose values monthly" },
+              { "text": "CGMS" }
+            ],
+            "correctAnswer": "CGMS"
+          }
+        ]
+      },
+      {
+        "subModuleId": 3002,
+        "Name": "Therapy",
+        "presentedBy": "Dr. Neeta Deshpande ",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+        "videoName": "Dr-Neeta-Deshpande-video2.mp4",
+        "videoDuration": "7:18",
+        "badge": "therapy.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "BOOK",
+            "subType": "injection2",
+            "question": "Which of these is a non-insulin injectable anti-diabetic agent?",
+            "options": [
+              { "text": "SGLT2 inhibitor" },
+              { "text": "DPP inhibitor" },
+              { "text": "GLP 1 RA" },
+              { "text": "TZDs" }
+            ],
+            "correctAnswer": "GLP 1 RA"
+          },
+          {
+            "id": 2,
+            "type": "DART",
+            "question": "Insulins are classified according to the timelines of their action profile",
+            "options": [{ "text": "True" }, { "text": "False" }],
+            "correctAnswer": "False"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "plusbooth",
+            "question": "The following modes of insulin delivery are available in India except...",
+            "options": [
+              { "text": "Insulin pump" },
+              { "text": "Insulin pen" },
+              { "text": "Inhaler" },
+              { "text": "Syringes" }
+            ],
+            "correctAnswer": "Inhaler"
+          }
+        ]
+      },
+      {
+        "subModuleId": 3003,
+        "Name": "MNT- Tools & Techniques(OPD/IPD)",
+        "presentedBy": "Dr. Neeta Deshpande ",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+        "videoName": "Dr-Neeta-Deshpande-video3.mp4",
+        "videoDuration": "4:59",
+        "badge": "mnt-tools_techniques_OPD_IPD_.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "BOOK",
+            "subType": "bluebox2",
+            "question": "Meal Planing takes into account...",
+            "options": [
+              { "text": "Number of calories only" },
+              { "text": "Protein intake" },
+              { "text": "Carbohydrates in gms" },
+              { "text": "All of the above" }
+            ],
+            "correctAnswer": "All of the above"
+          },
+          {
+            "id": 2,
+            "type": "DART",
+            "question": "Glycemic Index is more important then Glycemic Load",
+            "options": [{ "text": "True" }, { "text": "False" }],
+            "correctAnswer": "False"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "plate",
+            "question": "A Healthy eating plate can consisst of all the these except...",
+            "options": [
+              { "text": "Whole grains" },
+              { "text": "Poultry" },
+              { "text": "Trans Fat" },
+              { "text": "Dairy Products" }
+            ],
+            "correctAnswer": "Trans Fat"
+          }
+        ]
+      },
+      {
+        "subModuleId": 3004,
+        "Name": "GDM & Hypo – Management ",
+        "presentedBy": "Dr. Neeta Deshpande ",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "videoName": "Dr-Neeta-Deshpande-video4.mp4",
+        "videoDuration": "5:32",
+        "badge": "gdm_hypo_management.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DART",
+            "question": "Obese women need to lose weight during pregancy to optimise outcomes",
+            "options": [{ "text": "Yes" }, { "text": "No" }],
+            "correctAnswer": "Yes"
+          },
+          {
+            "id": 2,
+            "type": "DOOR",
+            "question": "which of these does not cause macrosomia",
+            "subType":"gdmmacrosomia",
+            "options": [
+              { "text": "Diabetes" },
+              { "text": "Obesity" },
+              { "text": "Hypertension" },
+              { "text": "Excessive weight gain in pregnancy" }
+            ],
+            "correctAnswer": "Hypertension"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "plusbooth",
+            "question": "Hypoglycaemia should be treated with any fast action Carbohydrate of",
+            "options": [
+              { "text": "25 GM" },
+              { "text": "15 GM" },
+              { "text": "20 GM" },
+              { "text": "30 GM" }
+            ],
+            "correctAnswer": "15 GM"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ModuleId": 1003,
+    "ModuleName": "Training on- Individualized MNT for Weight & Diabetes management  ",
+    "presentedBy": "Dr. Shilpa Joshi",
+    "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+    "subModules": [
+      {
+        "subModuleId": 4001,
+        "Name": "Nutritional management with pharmacotherapy(OHA/Insulins)",
+        "presentedBy": "Dr. Shilpa Joshi",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "videoDuration": "4:08",
+        "badge": "nutritionalmanagementwithpharmacotherapy_OHA_Insulins_.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "Name the drug which can cause hypoglycemia in patients?",
+            "options": [
+              { "text": "Metformin" },
+              { "text": "Sulphonylurea" },
+              { "text": "DDP4" }, 
+              {"text":"Statin"}
+            ],
+            "correctAnswer": "Sulphonylurea"
+          },
+          {
+            "id": 2,
+            "type": "DOOR",
+            "subType":"thirdsamedoor",
+            "question": "Low carbohydrate diets( having less than 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Metformin" },
+              { "text": "DPP4 Inhibitor" },
+              { "text": "Statin" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType":"mybook",
+            "question": "Agents where particular meal composition doesn't matter?",
+            "options": [
+              { "text": "Insulin" },
+              { "text": "Sulphonylurea" },
+              { "text": "Alpha Glucosidase Inhibitor" },
+              { "text": "DPP4 Inhibitor" }
+            ],
+            "correctAnswer": "DPP4 Inhibitor"
+          },
+
+          {
+            "id": 4,
+            "type": "BOOK",
+            "subType":"bloodTest",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Give 15g of simple carb and wait for 15 mins" },
+              { "text": "Give tea with sugar and biscuits," },
+              { "text": "Give food containing carbohydrate" },
+              { "text": "Give a fruit" }
+            ],
+            "correctAnswer": "Give 15g of simple carb and wait for 15 mins"
+          }
+        ]
+      },
+      {
+        "subModuleId": 4002,
+        "Name": "Lipid & cholesterol Management",
+        "presentedBy": "Dr. Shilpa Joshi",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video2.mp4",
+        "videoDuration": "3:38",
+        "badge": "lipid_cholesterolmanagement.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "subType":"thirdsamedoor",
+            "question": "Statin drugs given in management of cholesterol inhibit which enzyme?",
+            "options": [
+              { "text": "HMGCoA Reductase" },
+              { "text": "Citrate Synthase" },
+              { "text": "Manoyl co A" },
+              {"text":"Glucokinase"}
+            ],
+            "correctAnswer": "HMGCoA Reductase"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "Dietary sources of omega 3 fat are?",
+            "options": [
+              { "text": "Fish" },
+              { "text": "Cashewnut" },
+              { "text": "Walnut" },
+              { "text": "Almonds " }
+            ],
+            "correctAnswer": "Fish"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "plusbooth",
+            "question": "Reduction of carbohydrate portion of diet leads to reduction of which component of lipid  profile?",
+            "options": [
+              { "text": "Triglycerides" },
+              { "text": "LDL" },
+              { "text": "TOTAL Cholesterol" },
+              { "text": "VLDL" }
+            ],
+            "correctAnswer": "Triglycerides"
+          },
+          {
+            "id": 4,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "What is favourable omega 3: omega 6 fat ratio of PUFA?",
+            "options": [
+              { "text": "1:5-1:10" },
+              { "text": "1: 15-1:20" },
+              { "text": "1:30-1:1:40" }
+            ],
+            "correctAnswer": "1:5-1:10"
+          }
+        ]
+      },
+      {
+        "subModuleId": 4003,
+        "Name": "Bariatric Management",
+        "presentedBy": "Dr. Shilpa Joshi",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video3.mp4",
+        "videoDuration": "7:46",
+        "badge": "bariatricmanagement.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "subType":"thirdsamedoor",
+            "question": "Which kind of diets are used in weight management?",
+            "options": [
+              { "text": "Hypocaloric Diet" },
+              { "text": "Eucaloric Diet" },
+              { "text": "Hyper Caloric Diet" }
+            ],
+            "correctAnswer": "Hypocaloric Diet"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "Which nutrient has a high satiety index and prevents re-eating or snacking?",
+            "options": [
+              { "text": "Protein" },
+              { "text": "Carbohydrate" },
+              { "text": "Fat" }
+            ],
+            "correctAnswer": "Protein"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "What are the sources of good quality fat?",
+            "options": [
+              { "text": "Nuts and oilseeds" },
+              { "text": "Unrefined oil" },
+              { "text": "Ghee" }
+            ],
+            "correctAnswer":"Nuts and oilseeds"
+          },
+          {
+            "id": 4,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "Bariatric diets should be rich in what nutrients?",
+            "options": [
+              { "text": "Micronutrients and fibre" },
+              { "text": "Carbohydrate" },
+              { "text": "Fat" }
+            ],
+            "correctAnswer": "Micronutrients and fibre"
+          }
+        ]
+      },
+      {
+        "subModuleId": 4004,
+        "Name": "Hands-on counselling tips",
+        "presentedBy": "Dr. Shilpa Joshi",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video4.mp4",
+        "videoDuration": "4:45",
+        "badge": "hands_oncounsellingtips.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "subType":"thirdsamedoor",
+            "question": "Understanding the pain that a patient feels while doing sugar monitoring --- This is called?",
+            "options": [
+              { "text": "Empathy" },
+              { "text": "Sympathy" },
+              { "text": "Understanding" }
+            ],
+            "correctAnswer": "Empathy"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "Die plans for the patient have to be",
+            "options": [
+              { "text": "Realistic" },
+              { "text": "Idealistic" },
+              { "text": "Measured" }
+            ],
+            "correctAnswer": "Realistic"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "subType": "injection2",
+            "question": "Most important facet of counselling is",
+            "options": [
+              { "text": "Goal setting" },
+              { "text": "Solutions" },
+              { "text": "Optimal understanding" }
+            ],
+            "correctAnswer": "Goal setting"
+          },
+          {
+            "id": 4,
+            "type": "BOOK",
+            "subType": "bluebox",
+            "question": "Outcome of counselling is known when",
+            "options": [
+              { "text": "Set goals are met with" },
+              { "text": "When standards are followed" },
+              { "text": "Set goals are not wet with" }
+            ] ,
+            "correctAnswer": "Set goals are met with"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "sessionID": 90001,
+    "userId": 1,
+    "fullname": "Lorem ipsum",
+    "email": "test@test.com",
+    "phone": "1234567890",
+    "password": "111111",
+    "createdDate": "2021-09-09 23:22:00",
+    "UserBadges": [
+      {
+        "userid": 1,
+        "moduleID": 1001,
+        "submoduleid": 2002,
+        "BadgeEarned": "d-1.png",
+        "BadgeEarnedOn": "2021-09-10 23:25:00"
+      }
+    ],
+    "UserModules": [
+      {
+        "userid": 1,
+        "moduleID": 1001,
+        "submoduleid": 2002,
+        "StartDate": "2021-09-10 23:24:00",
+        "endDate": "2021-09-10 23:24:00"
+      },
+      {
+        "userid": 1,
+        "moduleID": 1001,
+        "submoduleid": 2001,
+        "StartDate": "2021-09-10 23:26:00"
+      }
+    ]
+  }
+]

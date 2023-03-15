@@ -1,0 +1,887 @@
+[
+  {
+    "ModuleId": 1001,
+    "ModuleName": "Diabetes Science ",
+    "presentedBy": "Dr. Anjali Bhatt",
+    "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+    "subModules": [
+      {
+        "subModuleId": 2001,
+        "Name": "Physiology",
+        "presentedBy": "Dr. Anjali Bhatt",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p> ",
+        "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p> ",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "Physiology.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "BOOK",
+            "question": "Diagnosis of diabetes is done when the blood glucose levels are",
+            "options": [
+              { "text": "Fasting Plasma Glucose (FPG) ≥ 126 mg/dL" },
+              { "text": "2 hour Post glucose Plasma Glucose (PPG) ≥ 200 mg/dL" },
+              { "text": "Random Plasma Glucose ≥ 200 mg/dL with symptoms" }
+              { "text": "Any one of the above" }
+            ],
+            "correctAnswer": "Any one of the above"
+          },
+          
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "Following body organs play important role in glucose metabolism",
+            "options": [
+              { "text": "Pancreas" },
+              { "text": "Liver" },
+              { "text": "Muscle" },
+              { "text": "All of the above" }
+            ],
+            "correctAnswer": "All of the above"
+          },
+          {
+            "id": 3,
+            "type": "BOOK",
+            "question": "Pathophysiology of diabetes involves one of following",
+            "options": [
+              { "text": "Reduced insulin sensitivity" },
+              { "text": "Reduced insulin resistance" },
+              { "text": "Increase insulin secretion capacity" },
+              { "text": "None of the above" }
+            ],
+            "correctAnswer": "Reduced insulin sensitivity"
+          },
+          {
+            "id": 3,
+            "type": "BUCKET",
+            "Question": "drags the drug into matching basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "1" },
+              { "bucket": "1", "option": "5" },
+              { "bucket": "1", "option": "3" },
+              { "bucket": "2", "option": "2" },
+              { "bucket": "2", "option": "4" },
+              { "bucket": "2", "option": "6" }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "CHART",
+            "Question": "drags the correct food into basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "option": "1", "sequence": 1 },
+              { "option": "5", "sequence": 2 },
+              { "option": "3", "sequence": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "subModuleId": 2002,
+        "Name": "Understanding complications",
+        "presentedBy": "Dr. Anjali Bhatt",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "understandingcomplications.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "BUCKET",
+            "Question": "drags the drug into matching basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "1" },
+              { "bucket": "1", "option": "5" },
+              { "bucket": "1", "option": "3" },
+              { "bucket": "2", "option": "2" },
+              { "bucket": "2", "option": "4" },
+              { "bucket": "2", "option": "6" }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "CHART",
+            "Question": "drags the correct food into basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "option": "1", "sequence": 1 },
+              { "option": "5", "sequence": 2 },
+              { "option": "3", "sequence": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "subModuleId": 2003,
+        "Name": "Preventing complications",
+        "presentedBy": "Dr. Anjali Bhatt",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+
+        "badge": "preventingcomplications.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "BUCKET",
+            "Question": "drags the drug into matching basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "1" },
+              { "bucket": "1", "option": "5" },
+              { "bucket": "1", "option": "3" },
+              { "bucket": "2", "option": "2" },
+              { "bucket": "2", "option": "4" },
+              { "bucket": "2", "option": "6" }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "CHART",
+            "Question": "drags the correct food into basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "option": "1", "sequence": 1 },
+              { "option": "5", "sequence": 2 },
+              { "option": "3", "sequence": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "subModuleId": 2004,
+        "Name": "Sick Day Diabetes Management",
+        "presentedBy": "Dr. Anjali Bhatt",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "ModuleSummary": "<p>Diabetes Mellitus or Diabetes as it is commonly known, is the inability of the body to effectively use or respond to the insulin produced by the body, and as a result, blood sugar levels cannot be regulated effectively. </p>    <p>In this topic of Diabetes Science we will look into the pathophysilogy, complications and the sick day management in diabetes.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "sickdaydiabetesmanagement.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "BUCKET",
+            "Question": "drags the drug into matching basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "1" },
+              { "bucket": "1", "option": "5" },
+              { "bucket": "1", "option": "3" },
+              { "bucket": "2", "option": "2" },
+              { "bucket": "2", "option": "4" },
+              { "bucket": "2", "option": "6" }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "CHART",
+            "Question": "drags the correct food into basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "option": "1", "sequence": 1 },
+              { "option": "5", "sequence": 2 },
+              { "option": "3", "sequence": 3 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ModuleId": 1002,
+    "ModuleName": "Hands-on Diabetes Management",
+    "presentedBy": "Dr. Neeta Deshpande ",
+    "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+    "subModules": [
+      {
+        "subModuleId": 3001,
+
+        "Name": "Monitoring",
+        "presentedBy": "Dr. Neeta Deshpande ",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "monitoring.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "BUCKET",
+            "Question": "drags the drug into matching basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "1" },
+              { "bucket": "1", "option": "5" },
+              { "bucket": "1", "option": "3" },
+              { "bucket": "2", "option": "2" },
+              { "bucket": "2", "option": "4" },
+              { "bucket": "2", "option": "6" }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "CHART",
+            "Question": "drags the correct food into basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "option": "1", "sequence": 1 },
+              { "option": "5", "sequence": 2 },
+              { "option": "3", "sequence": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "subModuleId": 3002,
+        "Name": "Therapy",
+        "presentedBy": "Dr. Neeta Deshpande ",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "therapy.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "BUCKET",
+            "Question": "drags the drug into matching basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "1" },
+              { "bucket": "1", "option": "5" },
+              { "bucket": "1", "option": "3" },
+              { "bucket": "2", "option": "2" },
+              { "bucket": "2", "option": "4" },
+              { "bucket": "2", "option": "6" }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "CHART",
+            "Question": "drags the correct food into basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "option": "1", "sequence": 1 },
+              { "option": "5", "sequence": 2 },
+              { "option": "3", "sequence": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "subModuleId": 3003,
+        "Name": "MNT- Tools & Techniques(OPD/IPD)",
+        "presentedBy": "Dr. Neeta Deshpande ",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "mnt-tools_techniques_OPD_IPD_.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "BUCKET",
+            "Question": "drags the drug into matching basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "1" },
+              { "bucket": "1", "option": "5" },
+              { "bucket": "1", "option": "3" },
+              { "bucket": "2", "option": "2" },
+              { "bucket": "2", "option": "4" },
+              { "bucket": "2", "option": "6" }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "CHART",
+            "Question": "drags the correct food into basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "option": "1", "sequence": 1 },
+              { "option": "5", "sequence": 2 },
+              { "option": "3", "sequence": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "subModuleId": 3004,
+        "Name": "GDM & Hypo – Management ",
+        "presentedBy": "Dr. Neeta Deshpande ",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "ModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. Diabetes management has many facets like diet exercise education and pharmacotherapy. In this section I shall be discussing nuances of monitoring, management and MNT. These all lead to better outcomes and better glycemic control. Hypoglycemia causes fear and anxiety among patients and knowledge of its management is an important facet of diabetes management.</p>",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "gdm_hypo_management.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "CHART",
+            "question": "where do you live",
+            "options": {
+              "option1": "moon",
+              "option2": "earth",
+              "option3": "sun"
+            },
+            "correctAnswer": "Earth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ModuleId": 1003,
+    "ModuleName": "Training on- Individualized MNT for Weight & Diabetes management  ",
+    "presentedBy": "Dr. Shilpa Joshi",
+    "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+    "subModules": [
+      {
+        "subModuleId": 4001,
+        "Name": "Nutritional management with pharmacotherapy(OHA/Insulins)",
+        "presentedBy": "Dr. Shilpa Joshi",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+
+        "badge": "nutritionalmanagementwithpharmacotherapy_OHA_Insulins_.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "BUCKET",
+            "Question": "Drag the drugs into the matching basket based on if they can induce hypoglycemia or hyperglycemia in a patient",
+            "options": [
+              { "option": "Insulin" },
+              { "option": "Quinolone" },
+              { "option": "Sulphonyl Urea" },
+              { "option": "Corticosteroids" },
+              { "option": "Propanolol" },
+              { "option": "AGI" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "Insulin" },
+              { "bucket": "1", "option": "AGI" },
+              { "bucket": "1", "option": "Sulphonyl Urea" },
+              { "bucket": "2", "option": "Quinolone" },
+              { "bucket": "2", "option": "Corticosteroids" },
+              { "bucket": "2", "option": "Propanolol" }
+            ]
+          },
+          {
+            "id": 2,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 4,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+
+          {
+            "id": 3,
+            "type": "CHART",
+            "Question": "For which particular meal agent does composition not matter?",
+            "options": [
+              { "option": "MetFormin" },
+              { "option": "Lorem ipsum" },
+              { "option": "Glitazon" },
+              { "option": "Lorem ipsum" },
+              { "option": "Lorem ispum" },
+              { "option": "DDP4 inhibitor" }
+            ],
+            "correctAnswer": [
+              { "option": "MetFormin", "sequence": 1 },
+              { "option": "Glitazon", "sequence": 2 },
+              { "option": "DDP4 inhibitor", "sequence": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "subModuleId": 4002,
+        "Name": "Lipid & cholesterol Management",
+        "presentedBy": "Dr. Shilpa Joshi",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "lipid_cholesterolmanagement.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "BUCKET",
+            "Question": "drags the drug into matching basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "1" },
+              { "bucket": "1", "option": "5" },
+              { "bucket": "1", "option": "3" },
+              { "bucket": "2", "option": "2" },
+              { "bucket": "2", "option": "4" },
+              { "bucket": "2", "option": "6" }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "CHART",
+            "Question": "drags the correct food into basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "option": "1", "sequence": 1 },
+              { "option": "5", "sequence": 2 },
+              { "option": "3", "sequence": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "subModuleId": 4003,
+        "Name": "Bariatric Management",
+        "presentedBy": "Dr. Shilpa Joshi",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "bariatricmanagement.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "BUCKET",
+            "Question": "drags the drug into matching basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "bucket": "1", "option": "1" },
+              { "bucket": "1", "option": "5" },
+              { "bucket": "1", "option": "3" },
+              { "bucket": "2", "option": "2" },
+              { "bucket": "2", "option": "4" },
+              { "bucket": "2", "option": "6" }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "CHART",
+            "Question": "drags the correct food into basket",
+            "options": [
+              { "option": "1" },
+              { "option": "2" },
+              { "option": "3" },
+              { "option": "4" },
+              { "option": "5" },
+              { "option": "6" }
+            ],
+            "correctAnswer": [
+              { "option": "1", "sequence": 1 },
+              { "option": "5", "sequence": 2 },
+              { "option": "3", "sequence": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "subModuleId": 4004,
+        "Name": "Hands-on counselling tips",
+        "presentedBy": "Dr. Shilpa Joshi",
+        "presentedIntro": "RD, Mumbai. Director, Mumbai Diet and Health Centre, Practicing Dietician, iabetes Educator, Hon Secretary – All India Association of Advancing Research iabetes Educator, Hon Secretary – All India Association of Advancing Research",
+        "subModuleSummary": "<p>Diabetes is a globally rising scrounge and its numbers are increasing exponentially in India. </p>",
+        "ModuleSummary": "<p>Nutrition intervention is one of the three pillars of diabetes management.  </p> <p>As we all know, the principle of MNT for diabetes includes not only managing the blood sugars but also managing body weight, blood lipids and holistic management like prevention of macro and micro vascular complications.</p>    <p>In these modules various facets of nutritional management in diabetes are discussed like planning diets keeping in mind weight management or cardiovascular issues. </p>    <p>Also it will give you a broad perspective on what to keep in mind while planning with various therapeutic agents.Last but not the least counselling about these diets is where all the success of a diet plan lies and that will also be tackled in this module.</p>",
+        "videoName": "Dr-Shilpa-Joshi-video1.mp4",
+        "badge": "hands_oncounsellingtips.png",
+        "firstQuestionId": 1,
+        "questions": [
+          {
+            "id": 1,
+            "type": "DOOR",
+            "question": "Low carbohydrate diets (having less then 30% carbs) are not recommended with which oral agent",
+            "options": [
+              { "text": "Lorem ipsum" },
+              { "text": "SGLT2 inhibitors" },
+              { "text": "Lorem ipsum" }
+            ],
+            "correctAnswer": "SGLT2 inhibitors"
+          },
+          {
+            "id": 2,
+            "type": "BOOK",
+            "question": "In case of hypoglycemia in patients with diabetes, what should be the mode of therapy?",
+            "options": [
+              { "text": "Rule of 16" },
+              { "text": "Rule of 13" },
+              { "text": "Rule of 15" },
+              { "text": "Rule of 21" }
+            ],
+            "correctAnswer": "Rule of 15"
+          },
+          {
+            "id": 3,
+            "type": "CHART",
+            "question": "where do you live",
+            "options": {
+              "option1": "moon",
+              "option2": "earth",
+              "option3": "sun"
+            },
+            "correctAnswer": "Earth"
+          }
+        ]
+      }
+    ]
+  }
+]

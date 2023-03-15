@@ -1,0 +1,104 @@
+<html class="openNav">
+<head>
+  <title>BSV 1: Dashboard</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="admin/css/admin.css" />
+  <script src="admin/js/jquery.min.js"></script>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+
+  <div class="primary-nav" id="loadAdminHeader"></div>
+
+  <div class="new-wrapper">
+    <div id="main">
+      <div id="regions_div" style="width: calc(100% - 0px);height: 100vh;"></div>
+    </div>
+  </div>
+
+  <script src="/admin/js/admin.js"></script>
+
+  <script>
+
+    function camelCaseText(txt) {
+    //  console.log(txt)
+      return txt.substr( 0, 1 ).toString().toUpperCase() + txt.substr( 1 ).toString().toLowerCase();
+    }
+
+    google.charts.load('current', {
+      'packages': ['geochart'],
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+
+      let param = {
+        parentId: 1,
+        method: 'getMychildforOrgChart'
+      };
+
+      axios
+        .post("/api", param)
+        .then((response) => {
+            var tree = [];
+            let data1 = response.data[0];
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'State');
+            data.addColumn('number', 'Total Potential');
+            data.addColumn('number', 'Actual Target');
+            //data.addColumn('string', 'Actual Target');
+            data1.forEach(rec => { 
+              //console.log(rec.StateName)
+             data.addRows([[camelCaseText(rec.StateName),  parseInt(rec.TotalPotential), parseInt(rec.ActualTargetAchieved)]]);
+            });
+
+            var options = {
+              region: 'IN', // India 
+             // displayMode: 'text', //If you want to highlight some cities
+              resolution: 'provinces', //If you want to display provinces in India
+              //colorAxis: {colors: ['green', 'blue', '#e31b23']},
+              colorAxis: {
+                //values: [1, 2, 3],
+              //  colors: ['#1aa3ff', 'grey', 'red'],
+                minValue: 0,  
+                colors: ['#1aa3ff', '#e31b23']
+              },
+                backgroundColor: {
+                strokeWidth: 1,
+                stroke: '#000'
+              }, //'#81d4fa',
+              datalessRegionColor: '#ffffff',
+              //keepAspectRatio: false, 
+              defaultColor: '#f5f5f5',
+              displayMode: 'regions'
+            };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+      google.visualization.events.addListener(chart, 'select', function () {
+        if (chart.getSelection()[0]) {
+          var selectionIdx = chart.getSelection()[0].row;
+          var countryName = data.getValue(selectionIdx, 0);
+          console.log('selectionIdx', selectionIdx);
+          console.log('countryName', countryName);
+          window.location.href = `hospital-list?id=${selectionIdx}&name=${countryName}`;
+        }
+      });
+
+      chart.draw(data, options);
+
+    });      
+    }
+  </script>
+
+</body>
+
+</html>

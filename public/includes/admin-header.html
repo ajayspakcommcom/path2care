@@ -1,0 +1,28 @@
+<button href="javascript:void(0);" class="hamburger open-panel nav-toggle" id="nav-toggle">
+    <span class="screen-reader-text">Menu</span>
+</button>
+
+<nav role="navigation" class="menu">
+    <a href="/admin-dashbaord" class="logotype"><img src="img/logo.png" alt="" class="img-responsive" /></a>
+    <div class="overflow-container">
+        <ul class="menu-dropdown">
+            <li class="rbmLink hide"><a href="/dashboard.html" class="dropdown-btn">Home</a></li>
+            <li class="menu-hasdropdown">
+                <div class="dropdown-btnwrapper">
+                    <a href="javascript:void(0);" class="dropdown-btn">Reports</a>
+                    <img src="/admin/img/down-arrow.png" alt="icon" class="drop-icon" />
+                </div>
+                <ul class="sub-menu-dropdown">
+                    <li><a href="/report">Report 1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    $('.dropdown-btnwrapper').on('click', function () {
+            let $this = $(this);
+            $this.parents('.menu-hasdropdown').find('.sub-menu-dropdown').toggleClass('active');
+        });
+</script>

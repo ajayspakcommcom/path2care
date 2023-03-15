@@ -1,0 +1,108 @@
+<html class="openNav">
+
+<head>
+    <title>BSV 1: Hospital List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="admin/css/admin.css" />
+    <script src="admin/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="primary-nav" id="loadAdminHeader"></div>
+
+    <div class="new-wrapper">
+        <div id="main">
+            <div id="main-contents">
+                <h1 class="m-b-30"><span id="hospName"></span> : Hospitals</h1>
+                <div class="container">          
+                    <div class="custom-table custom-table-with-border">
+                      <div class="zone-head-work text-right m-b-20">
+                        <span>Zone Head :</span> <b>Lorem Ipsum</b> /
+                        <span>RBM :</span> <b>Lorem Ipsum</b> 
+                      </div>
+                        <table class="table table-bordered table-striped grey-box">
+                            <thead>
+                              <tr>
+                                <th>Hospital Name</th>
+                                <th>Potential</th>
+                                <th>Actual</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody id="loadHospitalList"></tbody>
+                          </table>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader-wrapper none">
+        <div class="loader"></div>
+    </div>
+
+    <script src="admin/js/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <!--Data Table-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css" />
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <!--Data Table-->
+
+    <script src="/admin/js/admin.js"></script>
+
+    <script>
+        
+        function setHospitalName() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const hospName = urlParams.get('name');
+          $('#hospName').text(hospName);
+        }
+
+        setHospitalName();
+
+
+function getHospitalList() {
+  const urlParams = new URLSearchParams(window.location.search),
+        hospName = urlParams.get('name');
+let param = {
+  parentId: 1,
+  method: 'getHospitalList',
+  stateName: hospName
+};
+
+axios
+  .post("/api", param)
+  .then((response) => {
+
+      const hospitalList = response.data[0];
+      console.log(hospitalList);
+      let showHtml = '';
+     
+
+        hospitalList.forEach((currVal, indx, arr) => {
+                showHtml += ` <tr>
+                          <td>${currVal.hospitalName}</td>
+                          <td>8000</td>
+                          <td>10000</td>
+                          <td><a href="/hospital-detail">View in Detail</a></td>
+                        </tr>   `;
+            });
+
+            //console.log(showHtml);
+      
+            $('#loadHospitalList').html(showHtml);
+
+  });      
+}
+getHospitalList();
+</script>
+
+</body>
+
+</html>

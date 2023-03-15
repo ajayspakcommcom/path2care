@@ -1,0 +1,7 @@
+CREATE TABLE tblZone (
+    zoneID smallint NOT NULL IDENTITY (1,1) PRIMARY KEY,
+    name varchar(255),
+    isDisable bit,
+    createdDate smallDateTime DEFAULT GETDATE(),
+
+);

@@ -1,0 +1,239 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/app.css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<title>Path 2 Care : Dashboard</title>
+
+<div id='myNavbar'></div>
+
+<!-- <br><br> -->
+
+<div class="container-fluid screen-2">
+  <div class="row" id='dvMeds'>
+  </div>
+</div>
+
+<!-- <div id='dvMeds'></div> -->
+
+<div id="dvform" class="none">
+
+  <!-- <form id="frmLogData" method="post" action="/api" onsubmit="validateLogData();return false;">
+    Date of Entry: <input type="date" id="logdate" name="logdate"><br><br>
+    <label for="vials"> No of Vials:</label>
+    <select id="vials" name="vials">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select><br><br>
+    Name of the paitent: <input type="text" id="txtPaitentName" /><br><br>
+
+    Name of the hospital: <select id="hospitalList" name="hospitalList">
+      <option value="xxx">xxx</option>
+    </select><br><br><br><br>
+    <input type="submit">
+  </form> -->
+
+  <div class="screen-3">
+    <div class="modal fade in" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" onclick="gotoDashboard()">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <form id="frmLogData" method="post" action="/api" onsubmit="validateLogData();return false;">
+              <input type="hidden" id="txtSelectedMedId"/>
+              
+              <div class="project-form">
+                <div>
+                    <img alt="product 1" class="img-responsive" id="selectedMedImg" />
+                    <div class="prod-desc">
+                      <strong>Objective</strong>
+                      <p id="selectedMedObj"></p>
+                      
+                    </div>
+                    <div class="objective">
+                      <strong>Target</strong>
+                      <p id="selectedMedTxt"></p>
+                    </div>
+                </div>
+                <div>
+  
+                  <div class="object-form">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="date">Date</label>
+                          <input type="date" id="logdate" name="logdate" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="patients">No. of Patients</label>
+                          <select class="form-control" id="patients" name="patients">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                          <label for="txtDrName">Doctor Name</label>
+                          <input type="text" id="txtDrName" name="txtDrName" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+
+                     <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="txtDrCode">Doctor Code</label>
+                          <input type="text" class="form-control" id="txtDrCode" name="txtDrCode" />
+                        </div>
+                      </div>
+                      
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="vials">No. of Vials</label>
+                          <select class="form-control" id="vials" name="vials">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                          </select>
+                        </div>
+                      </div>
+
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                        <!-- <div class="form-group">
+                          <label for="hospitalList">Name of the Hospital</label>
+                          <select class="form-control" id="hospitalList" name="hospitalList">
+                            <option value="xxx">XXX</option>
+                            <option value="zzz">ZZZ</option>
+                          </select>
+                        </div> -->
+
+                        <div class="form-group">
+                          <label for="hospitalList">Name of the Hospital</label>
+                          <input type="text" class="form-control" id="hospitalList" name="hospitalList" />
+                        </div>
+
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="txtCity">City</label>
+                          <input type="text" class="form-control" id="txtCity" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="txtIndication">Indication</label>
+                          <input type="text" class="form-control" id="txtIndication" name="txtIndication" maxlength="99" />
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="txtSpeciality">Speciality</label>
+                          <input type="text" class="form-control" id="txtSpeciality" maxlength="99" />
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <button type="reset" class="btn btn-default btn-grad btn-grad-grey">Reset</button>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="submit" class="btn btn-default btn-grad" value="Submit" />
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="thank-you-wrapper hide">
+                    <strong>Thank you for the submission.</strong>
+                    <p>Click below to go back to the dashboard.</p>
+                    <button type="button" class="btn btn-default btn-grad" onclick="gotoDashboard()">Go to Dashboard</button>
+                  </div>
+  
+                </div>
+              </div>
+          
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<div class="copyright">
+  <p>
+    Copyright @ 2022 Bharat Serums and Vaccines Limited (BSV) <br /> Privacy Policy
+  </p>
+</div>
+
+<img src="img/laxshya-logo.png" alt="laxshya logo" class="img-responsive laxshya-logo" />
+
+<script src="js/common.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+LoadMedicine();
+
+  setTimeout(function () {
+    loadUserDetails();
+  }, 500);
+
+  function appendOptionList() {
+    let optionList;
+    for(let i = 1; i<=100; i++) {
+        optionList += `<option value="${i}">${i}</option>`;
+    }
+    $('#vials').html(optionList);
+  }
+
+  $(document).ready(function(){
+    appendOptionList();
+  });
+
+</script>
