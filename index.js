@@ -6,23 +6,42 @@ const bodyParser = require("body-parser");
 const app = express();
 const sql = require("mssql");
 const { isArray } = require("util");
- 
- //app.use(express.static(path.join(__dirname, "public")));
 
- app.use("/", express.static(__dirname + "/public"));
- app.use("/admin", express.static(__dirname + "/admin"));
+//app.use(express.static(path.join(__dirname, "public")));
+
+app.use("/", express.static(__dirname + "/public"));
+app.use("/admin", express.static(__dirname + "/admin"));
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
 
+// const config = {
+//   server: "N1NWPLSK12SQL-v03.shr.prod.ams1.secureserver.net",
+//   server: "N1NWPLSK12SQL-v03.shr.prod.ams1.secureserver.net",
+//   user: "aasha",
+//   password: "2!Oryc83",
+//   port: 1433,
+//   database: "aasha-bsvwithu",
+//   pool: {
+//     max: 10,
+//     min: 0,
+//     idleTimeoutMillis: 30000,
+//   },
+//   options: {
+//     encrypt: true, // for azure
+//     trustServerCertificate: true, // change to true for local dev / self-signed certs
+//   },
+// };
+
+
 const config = {
-  server: "N1NWPLSK12SQL-v03.shr.prod.ams1.secureserver.net",
-  user: "aasha",
-  password: "2!Oryc83",
+  server: "P3NWPLSK12SQL-v15.shr.prod.phx3.secureserver.net",
+  user: "spakDb",
+  password: "Spak@123-",
   port: 1433,
-  database: "aasha-bsvwithu",
+  database: "bsvDb",
   pool: {
     max: 10,
     min: 0,
@@ -62,7 +81,7 @@ app.get("/hospital-detail", (req, res) => {
 });
 
 app.post("/api", (req, res) => {
-    console.log('method--->'+req.body.method);
+  console.log('method--->' + req.body.method);
 
   switch (req.body.method) {
     case "login":
@@ -83,73 +102,73 @@ app.post("/api", (req, res) => {
           success = false;
           msg = 'Login failed'
         }
-        response = { 
-          success,msg,userDetiails
+        response = {
+          success, msg, userDetiails
         };
         console.log(response)
         res.status(200).json(response);
       });
       break;
-      case "getMedicine":
-        console.clear(); 
+    case "getMedicine":
+      console.clear();
       _getMedicine(req.body).then((response) => {
-         res.status(200).json(response);
-       });
+        res.status(200).json(response);
+      });
       break;
-      case "dataLog":
-        console.clear(); 
+    case "dataLog":
+      console.clear();
       _dataLog(req.body).then((response) => {
         let rep = _prepareResponse(response)
-         res.status(200).json(rep);
-       });
+        res.status(200).json(rep);
+      });
       break;
-      //
-      case "adminuserlogin":
-        console.clear(); 
+    //
+    case "adminuserlogin":
+      console.clear();
       _adminuserlogin(req.body).then((response) => {
         let rep = _prepareResponse(response)
-         res.status(200).json(rep);
-       });
+        res.status(200).json(rep);
+      });
       break;
-      case "getMychildforOrgChart":
-        console.clear(); 
+    case "getMychildforOrgChart":
+      console.clear();
       _getMychildforOrgChart(req.body).then((response) => {
-        
+
         //let rep = _prepareResponse(response)
-         res.status(200).json(response.recordsets);
-       });
+        res.status(200).json(response.recordsets);
+      });
       break;
-      //
-      case "loadDataForReport1":
-        console.clear(); 
-        _loadDataForReport1(req.body).then((response) => {
-        
+    //
+    case "loadDataForReport1":
+      console.clear();
+      _loadDataForReport1(req.body).then((response) => {
+
         //let rep = _prepareResponse(response)
-         res.status(200).json(response.recordset);
-       });
+        res.status(200).json(response.recordset);
+      });
       break;
-      case "loadDashboardReport":
-        console.clear(); 
-        _loadDashboardReport(req.body).then((response) => {
-         // console.log('index js', response);
-         res.status(200).json(response.recordset);
-       });
+    case "loadDashboardReport":
+      console.clear();
+      _loadDashboardReport(req.body).then((response) => {
+        // console.log('index js', response);
+        res.status(200).json(response.recordset);
+      });
       break;
-      case "loadFilters":
-        console.clear(); 
-        _loadFilters(req.body).then((response) => {
-         res.status(200).json(response.recordsets);
-       });
+    case "loadFilters":
+      console.clear();
+      _loadFilters(req.body).then((response) => {
+        res.status(200).json(response.recordsets);
+      });
       break;
-      case "getHospitalList":
-        console.clear(); 
-        _getHospitalList(req.body).then((response) => {
-        
+    case "getHospitalList":
+      console.clear();
+      _getHospitalList(req.body).then((response) => {
+
         //let rep = _prepareResponse(response)
-         res.status(200).json(response.recordsets);
-       });
+        res.status(200).json(response.recordsets);
+      });
       break;
-      //
+    //
     case "userModule":
       startModule(req.body).then((result) => {
         res.status(200).json({ message: "record added sucessfully" });
@@ -168,11 +187,11 @@ app.post("/api", (req, res) => {
     //   questionHTML = renderChartQuestion(matchingQuestion);
     //   break;
     default:
-    //   getdata(req.body).then((result) => {
-    //     res.status(200).json(result.recordset);
-    //   });
-    //console.log("Got body:", req.body.password);
-    //console.log(req.body);
+      //   getdata(req.body).then((result) => {
+      //     res.status(200).json(result.recordset);
+      //   });
+      //console.log("Got body:", req.body.password);
+      //console.log(req.body);
       break;
   }
 });
@@ -187,10 +206,10 @@ function _prepareResponse(response, flag = true) {
   console.log(response)
   console.log(response.recordset.length);
 
-  flag = (response.recordset.length === 0)?false : true;
+  flag = (response.recordset.length === 0) ? false : true;
   let res = {
     success: flag,
-    message: (flag)? 'API responded scuessfully': 'API responded NOT scuessfully'
+    message: (flag) ? 'API responded scuessfully' : 'API responded NOT scuessfully'
   }
   return res;
 
@@ -199,94 +218,94 @@ function _prepareResponse(response, flag = true) {
 
 function _loadDashboardReport(objParam) {
   console.log(objParam)
-    let response;
-    return new Promise((resolve) => {
-      var dbConn = new sql.ConnectionPool(config);
-      dbConn
-        .connect()
-        .then(function () {
-          var request = new sql.Request(dbConn);
-          request
-            .input("empId", sql.Int, ((objParam.empId) || null))
-            .execute("USP_ADMIN_DASHBOARD_MEDICINE")
-            .then(function (resp) {
-              resolve(resp);
-              dbConn.close();
-            })
-            .catch(function (err) {
-              //console.log(err);
-              dbConn.close();
-            });
-        })
-        .catch(function (err) {
-          //console.log(err);
-        });
-    });
+  let response;
+  return new Promise((resolve) => {
+    var dbConn = new sql.ConnectionPool(config);
+    dbConn
+      .connect()
+      .then(function () {
+        var request = new sql.Request(dbConn);
+        request
+          .input("empId", sql.Int, ((objParam.empId) || null))
+          .execute("USP_ADMIN_DASHBOARD_MEDICINE")
+          .then(function (resp) {
+            resolve(resp);
+            dbConn.close();
+          })
+          .catch(function (err) {
+            //console.log(err);
+            dbConn.close();
+          });
+      })
+      .catch(function (err) {
+        //console.log(err);
+      });
+  });
 }
 //
 
 function _loadFilters(objParam) {
   console.log(objParam)
-    let response;
-    return new Promise((resolve) => {
-      var dbConn = new sql.ConnectionPool(config);
-      dbConn
-        .connect()
-        .then(function () {
-          var request = new sql.Request(dbConn);
-          request
-            .input("empId", sql.Int, ((objParam.empId) || null))
-            .execute("USP_ADMIN_REPORT_FILTERS")
-            .then(function (resp) {
-              resolve(resp);
-              dbConn.close();
-            })
-            .catch(function (err) {
-              //console.log(err);
-              dbConn.close();
-            });
-        })
-        .catch(function (err) {
-          //console.log(err);
-        });
-    });
+  let response;
+  return new Promise((resolve) => {
+    var dbConn = new sql.ConnectionPool(config);
+    dbConn
+      .connect()
+      .then(function () {
+        var request = new sql.Request(dbConn);
+        request
+          .input("empId", sql.Int, ((objParam.empId) || null))
+          .execute("USP_ADMIN_REPORT_FILTERS")
+          .then(function (resp) {
+            resolve(resp);
+            dbConn.close();
+          })
+          .catch(function (err) {
+            //console.log(err);
+            dbConn.close();
+          });
+      })
+      .catch(function (err) {
+        //console.log(err);
+      });
+  });
 }
 
 
 function _loadDataForReport1(objParam) {
   console.log(objParam)
-    let response;
-    return new Promise((resolve) => {
-      var dbConn = new sql.ConnectionPool(config);
-      dbConn
-        .connect()
-        .then(function () {
-          var request = new sql.Request(dbConn);
-          request
-            .input("empId", sql.Int, ((objParam.empId) || null))
-            .input("medId", sql.Int,  ((objParam.medId) || null))
-            .input("hospitalName", sql.NVarChar, ((objParam.hospitalName) || null))
-            .input("hospitalCity", sql.NVarChar, ((objParam.hospitalCity) || null))
-            .input("fromDate", sql.NVarChar, ((objParam.fromDate) || null))
-            .input("toDate", sql.NVarChar, ((objParam.toDate) || null))
-            .execute("USP_REPORT_1")
-            .then(function (resp) {
-              //console.log(resp);
-              resolve(resp);
-              dbConn.close();
-            })
-            .catch(function (err) {
-              console.log(err);
-              dbConn.close();
-            });
-        })
-        .catch(function (err) {
-          console.log(err);
-        });
-    });
+  let response;
+  return new Promise((resolve) => {
+    var dbConn = new sql.ConnectionPool(config);
+    dbConn
+      .connect()
+      .then(function () {
+        var request = new sql.Request(dbConn);
+        request
+          .input("empId", sql.Int, ((objParam.empId) || null))
+          .input("medId", sql.Int, ((objParam.medId) || null))
+          .input("hospitalName", sql.NVarChar, ((objParam.hospitalName) || null))
+          .input("hospitalCity", sql.NVarChar, ((objParam.hospitalCity) || null))
+          .input("fromDate", sql.NVarChar, ((objParam.fromDate) || null))
+          .input("toDate", sql.NVarChar, ((objParam.toDate) || null))
+          .execute("USP_REPORT_1")
+          .then(function (resp) {
+            //console.log(resp);
+            resolve(resp);
+            dbConn.close();
+          })
+          .catch(function (err) {
+            console.log(err);
+            dbConn.close();
+          });
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  });
 }
 
-function _userLogin(objParam){
+function _userLogin(objParam) {
   return new Promise((resolve) => {
     var dbConn = new sql.ConnectionPool(config);
     dbConn
@@ -312,33 +331,33 @@ function _userLogin(objParam){
       });
   });
 
-} 
+}
 
 function _getMedicine(objParam) {
-    console.log(objParam)
-    let response;
-    return new Promise((resolve) => {
-      var dbConn = new sql.ConnectionPool(config);
-      dbConn
-        .connect()
-        .then(function () {
-          var request = new sql.Request(dbConn);
-          request
-            .execute("USP_GET_MEDICINES_LIST")
-            .then(function (resp) {
-              //console.log(resp);
-              resolve(resp);
-              dbConn.close();
-            })
-            .catch(function (err) {
-              //console.log(err);
-              dbConn.close();
-            });
-        })
-        .catch(function (err) {
-          //console.log(err);
-        });
-    });
+  console.log(objParam)
+  let response;
+  return new Promise((resolve) => {
+    var dbConn = new sql.ConnectionPool(config);
+    dbConn
+      .connect()
+      .then(function () {
+        var request = new sql.Request(dbConn);
+        request
+          .execute("USP_GET_MEDICINES_LIST")
+          .then(function (resp) {
+            //console.log(resp);
+            resolve(resp);
+            dbConn.close();
+          })
+          .catch(function (err) {
+            //console.log(err);
+            dbConn.close();
+          });
+      })
+      .catch(function (err) {
+        //console.log(err);
+      });
+  });
 }
 
 function _dataLog(objParam) {
@@ -349,17 +368,17 @@ function _dataLog(objParam) {
       .then(function () {
         var request = new sql.Request(dbConn);
         request
-        .input("OrderDate", sql.SmallDateTime, objParam.logDate)
-        .input("EmpID", sql.SmallInt , objParam.empId)
-        .input("MedID", sql.SmallInt, objParam.medId)
-        .input("noOfPaitents", sql.SmallInt, objParam.noOfPaitent)
-        .input("DoctorsName", sql.NVarChar, objParam.drName)
-        .input("DoctorID", sql.NVarChar, objParam.drCode)
-        .input("noOfVials", sql.SmallInt, objParam.noOfVials)
-        .input("HospitalName", sql.NVarChar,  objParam.hospitalName)
-        .input("HospitalCity", sql.NVarChar, objParam.hospitalCity)
-        .input("indication", sql.NVarChar, objParam.indication)
-        .input("speciality", sql.NVarChar, objParam.speciality)
+          .input("OrderDate", sql.SmallDateTime, objParam.logDate)
+          .input("EmpID", sql.SmallInt, objParam.empId)
+          .input("MedID", sql.SmallInt, objParam.medId)
+          .input("noOfPaitents", sql.SmallInt, objParam.noOfPaitent)
+          .input("DoctorsName", sql.NVarChar, objParam.drName)
+          .input("DoctorID", sql.NVarChar, objParam.drCode)
+          .input("noOfVials", sql.SmallInt, objParam.noOfVials)
+          .input("HospitalName", sql.NVarChar, objParam.hospitalName)
+          .input("HospitalCity", sql.NVarChar, objParam.hospitalCity)
+          .input("indication", sql.NVarChar, objParam.indication)
+          .input("speciality", sql.NVarChar, objParam.speciality)
           .execute("USP_LOG_USER_MEDICINE_DETAILS")
           .then(function (resp) {
             //console.log(resp);
@@ -421,7 +440,7 @@ function _getHospitalList(objParam) {
           .input("stateName", sql.VarChar, objParam.stateName)
           .execute("USP_GET_STATE_HOSPITALS")
           .then(function (resp) {
-            console.log('Ajay',resp);
+            console.log('Ajay', resp);
             //_processHirarchyData(resp);
             resolve(resp);
             dbConn.close();
@@ -447,7 +466,7 @@ function _getMychildforOrgChart(objParam) {
       .then(function () {
         var request = new sql.Request(dbConn);
         request
-         // .input("empID", sql.SmallInt, objParam.parentId)
+          // .input("empID", sql.SmallInt, objParam.parentId)
           .execute("USP_GET_CHART_RECORDS")
           .then(function (resp) {
             //console.log(resp);

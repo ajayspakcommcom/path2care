@@ -1,4 +1,5 @@
 <html class="openNav">
+
 <head>
     <title>Path 2 Care: Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,16 +30,16 @@
                         <thead>
                             <tr>
                                 <th>KAM</th>
-                                    <th>Speciality</th>
-                                    <th>Indication</th>
-                                    <th>Order Date</th>
-                                    <th>Brand</th>
-                                    <th>Doctor</th>
-                                    <th>No of Paitent</th>
-                                    <th>No of Vials</th>
-                                    <th>Hospital</th>
-                                    <th>City</th>
-                                    <th>Zone</th>
+                                <th>Speciality</th>
+                                <th>Indication</th>
+                                <th>Order Date</th>
+                                <th>Brand</th>
+                                <th>Doctor</th>
+                                <th>No of Paitent</th>
+                                <th>No of Vials</th>
+                                <th>Hospital</th>
+                                <th>City</th>
+                                <th>Zone</th>
                             </tr>
                         </thead>
                         <tbody id="downloadExcel"></tbody>
@@ -51,8 +52,9 @@
                     <div>
 
                         <div class="text-right export-excel m-t-30">
-                            <a  href="javascript:void(0);" type="button" id="exporttoexcel" onclick="exportToExcel('xlsx')">
-                                <img src="admin/img/excel.png" alt="export to excel" />   
+                            <a href="javascript:void(0);" type="button" id="exporttoexcel"
+                                onclick="exportToExcel('xlsx')">
+                                <img src="admin/img/excel.png" alt="export to excel" />
                             </a>
                             <!-- <a  href="javascript:void(0);" type="button" id="exporttoexcel" onclick="exportToExcel()">
                                 <img src="admin/img/excel.png" alt="export to excel" />   
@@ -90,7 +92,8 @@
                                 </select>
                             </div>
 
-                            <button type="button" class="btn btn-default default-btn" onclick="loadDataForReport1()">Submit</button>
+                            <button type="button" class="btn btn-default default-btn"
+                                onclick="loadDataForReport1()">Submit</button>
                             &nbsp;
                             <button type="button" class="btn btn-default"
                                 onclick="resetFilter();loadDataForReport1()">Reset</button>
@@ -130,7 +133,7 @@
                         </table>
 
 
-                        
+
 
                     </div>
 
@@ -153,41 +156,41 @@
 
     <!--Data Table-->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css" />
- 
+
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
-    
-    
+
+
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" />
-    
+
     <!--Data Table-->
 
     <script src="/admin/js/admin.js"></script>
     <script>
-    
 
-    function currentDate() {
 
-        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        function currentDate() {
 
-        let today = new Date();
-        let dd = String(today.getDate()).padStart(2, '0');
-        let mm = String(today.getMonth() + 1).padStart(2, '0'); 
-        let yyyy = today.getFullYear();
+            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-        today = dd + '-' + monthNames[mm] + '-' + yyyy;
-        return today;
-    }
+            let today = new Date();
+            let dd = String(today.getDate()).padStart(2, '0');
+            let mm = String(today.getMonth() + 1).padStart(2, '0');
+            let yyyy = today.getFullYear();
+
+            today = dd + '-' + monthNames[mm] + '-' + yyyy;
+            return today;
+        }
 
         $(document).ready(function () {
             $('#example').DataTable({
-              
-            "iDisplayLength": 100,
+
+                "iDisplayLength": 100,
                 "paging": false,
                 "language": {
                     emptyTable: 'Loading data', // 
@@ -195,7 +198,7 @@
                     zeroRecords: "No matching records found",
                     infoEmpty: "No records available - Got it?"
                 }
-              });
+            });
         });
 
     </script>
@@ -292,7 +295,7 @@
             // clear the table before populating it with more data
             $("#example").DataTable().clear();
             var length = data.length;
-            
+
             if (length == 0) {
                 console.log(length + '---> len')
                 $("#example").dataTable().empty();
@@ -317,7 +320,7 @@
                 let divArray = []
                 //console.log(medDetails);
                 data.forEach(item => {
-                        let divData = `
+                    let divData = `
                         <tr>
                             <th>${item.Seller}</th>
                             <th>${item.Speciality ? item.Speciality : '---'}</th>
@@ -332,9 +335,9 @@
                             <th>${item.zoneName}</th>
                         </tr>
                         `
-                        divArray.push(divData);
+                    divArray.push(divData);
                 });
-                
+
                 $('#downloadExcel > tr').remove();
                 $('#downloadExcel').append(divArray.join(''));
 
@@ -344,20 +347,20 @@
         }
 
         loadDataForReport1();
-        loadReport2();   
+        loadReport2();
 
-    //     function exportToExcel() {
-    //     let table = $('#example').dataTable();
-    //     window.open('data:application/vnd.ms-excel,' + encodeURIComponent(table[0].outerHTML));
-    // }
+        //     function exportToExcel() {
+        //     let table = $('#example').dataTable();
+        //     window.open('data:application/vnd.ms-excel,' + encodeURIComponent(table[0].outerHTML));
+        // }
 
-    function exportToExcel(type, fn, dl) {
-        var elt = document.getElementById('excelData');
+        function exportToExcel(type, fn, dl) {
+            var elt = document.getElementById('excelData');
             var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
             return dl ?
                 XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
                 XLSX.writeFile(wb, fn || ('Download.' + (type || 'xlsx')));
-    }
+        }
 
     </script>
 
@@ -449,13 +452,13 @@
 
             function showRbmLink() {
                 const urlSearchParams = new URLSearchParams(window.location.search);
-                const params = Object.fromEntries(urlSearchParams.entries());    
+                const params = Object.fromEntries(urlSearchParams.entries());
                 console.log(params.isRbm === undefined);
-                
-                if(params.isRbm !== undefined) {
-                    if(JSON.parse(params.isRbm)) {
+
+                if (params.isRbm !== undefined) {
+                    if (JSON.parse(params.isRbm)) {
                         $('.rbmLink').removeClass('hide');
-                    }                    
+                    }
                 }
             }
 
@@ -467,4 +470,5 @@
     </script>
 
 </body>
+
 </html>
