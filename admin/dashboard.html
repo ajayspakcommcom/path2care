@@ -187,6 +187,11 @@
             return today;
         }
 
+        function getDateMonthYear(dt) {
+            let date = new Date(dt);
+            return `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`;
+        }
+
         $(document).ready(function () {
             $('#example').DataTable({
 
@@ -291,6 +296,8 @@
         }
 
         function populateDataTable(data) {
+            console.log('populateDataTable');
+            console.log(data);
             //console.log("populating data table...");
             // clear the table before populating it with more data
             $("#example").DataTable().clear();
@@ -305,7 +312,8 @@
                         item.Seller,
                         item.Speciality ? item.Speciality : '---',
                         item.Indication ? item.Indication : '---',
-                        item.OrderDate,
+                        //(item.OrderDate),
+                        (getDateMonthYear(item.OrderDate)),
                         item.medicineName,
                         item.DoctorsName,
                         item.noOfPaitents,
@@ -316,7 +324,7 @@
                     ]);
                 });
 
-                console.log(data);
+                //console.log(data);
                 let divArray = []
                 //console.log(medDetails);
                 data.forEach(item => {
