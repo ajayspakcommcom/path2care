@@ -72,28 +72,42 @@
                                 <select class="form-control" id="emp" name="emp">
                                     <option value="0" selected>--Select Employeee--</option>
                                 </select>
+                                <!-- <select class="form-control" id="empList" name="emp">
+                                    <option value="0" selected>--Select Employeee--</option>
+                                </select> -->
                             </div>
                             <div class="form-group">
                                 <select class="form-control" id="cmbMedicine" name="cmbMedicine">
                                     <option value="0" selected>--Select Medicine--</option>
                                 </select>
+                                <!-- <select class="form-control" id="medList" name="cmbMedicine">
+                                    <option value="0" selected>--Select Medicine--</option>
+                                </select> -->
                             </div>
 
                             <div class="form-group">
                                 <select class="form-control" id="cmbHospitalList" name="cmbHospitalList">
                                     <option value="0" selected>Select Hospital</option>
-
                                 </select>
+                                <!-- <select class="form-control" id="hospList" name="cmbHospitalList">
+                                    <option value="0" selected>Select Hospital</option>
+                                </select> -->
                             </div>
 
                             <div class="form-group">
                                 <select class="form-control" id="cmbHospitalCity" name="cmbHospitalCity">
                                     <option value="0" selected>Select City</option>
                                 </select>
+                                <!-- <select class="form-control" id="cityList" name="cmbHospitalCity">
+                                    <option value="0" selected>Select City</option>
+                                </select> -->
                             </div>
 
                             <button type="button" class="btn btn-default default-btn"
                                 onclick="loadDataForReport1()">Submit</button>
+                            <!-- <button type="button" class="btn btn-default default-btn"
+                                onclick="filterReport()">Submit</button> -->
+
                             &nbsp;
                             <button type="button" class="btn btn-default"
                                 onclick="resetFilter();loadDataForReport1()">Reset</button>
@@ -131,14 +145,7 @@
                                 </tr>
                             </tfoot> -->
                         </table>
-
-
-
-
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -173,6 +180,7 @@
     <script src="/admin/js/admin.js"></script>
     <script>
 
+        let ADMINDATA = [];
 
         function currentDate() {
 
@@ -237,8 +245,11 @@
                 .post("/api", param)
                 .then((response) => {
                     //console.log(response);
-                    populateDataTable(response.data);
 
+                    ADMINDATA = [...response.data];
+                    loadDropDown();
+
+                    populateDataTable(response.data);
                     $('body').removeClass('overflow');
                     $('.loader-wrapper').addClass('none');
                 })
@@ -475,6 +486,69 @@
                 showRbmLink();
             }, 1000);
         });
+
+        function filterReport() {
+            let empText = $('select#empList option:selected').text(),
+                medText = $('select#medList option:selected').text(),
+                hospText = $('select#hospList option:selected').text(),
+                cityText = $('select#cityList option:selected').text();
+
+            console.log(ADMINDATA);
+
+            console.log(empText);
+            console.log(medText);
+            console.log(hospText);
+            console.log(cityText);
+
+            let resultData;
+            //debugger;
+            if (empText) {
+                resultData = ADMINDATA.filter(data => (data.Seller === empText));
+            }
+
+            if (empText && medText) {
+                resultData = ADMINDATA.filter(data => (data.Seller === empText) && (data.medicineName === medText));
+            }
+
+            if (empText && medText && hospText) {
+                resultData = ADMINDATA.filter(data => (data.Seller === empText) && (data.medicineName === medText) && (data.hospitalName === hospText));
+            }
+
+            if (empText && medText && hospText && cityText) {
+                resultData = ADMINDATA.filter(data => (data.Seller === empText) && (data.medicineName === medText) && (data.hospitalName === hospText) && (data.HospitalCity === cityText));
+            }
+
+            console.log(resultData);
+            populateDataTable(resultData);
+
+        }
+
+
+        function loadDropDown() {
+            console.log(ADMINDATA);
+            let empCombox = [...new Set(ADMINDATA.map((data) => { return data.Seller }))],
+                medCombox = [...new Set(ADMINDATA.map((data) => { return data.medicineName }))],
+                hospCombox = [...new Set(ADMINDATA.map((data) => { return data.hospitalName }))],
+                cityCombox = [...new Set(ADMINDATA.map((data) => { return data.HospitalCity }))],
+                empHtml = [], medHtml = [], hospHtml = [], cityHtml = [];
+
+            optionHtml(empCombox, empHtml);
+            optionHtml(medCombox, medHtml);
+            optionHtml(hospCombox, hospHtml);
+            optionHtml(cityCombox, cityHtml);
+
+            $('#empList').html(empHtml.join(''));
+            $('#medList').html(medHtml.join(''));
+            $('#hospList').html(hospHtml.join(''));
+            $('#cityList').html(cityHtml.join(''));
+        }
+
+        function optionHtml(arrList, htmlToBind) {
+            for (let item of arrList) {
+                htmlToBind.push(`<option value="${item}">${item}</option>`);
+            }
+        }
+
     </script>
 
 </body>
