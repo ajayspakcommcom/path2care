@@ -197,7 +197,8 @@
 
         function getDateMonthYear(dt) {
             let date = new Date(dt);
-            return `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`;
+            //console.log(`${date.getDate().toString()}-${date.getMonth().toString()}-${date.getFullYear().toString()}`);
+            return `${date.getDate().toString()} - ${date.getMonth().toString()} - ${date.getFullYear().toString()}`;
         }
 
         $(document).ready(function () {
@@ -344,7 +345,7 @@
                             <th>${item.Seller}</th>
                             <th>${item.Speciality ? item.Speciality : '---'}</th>
                             <th>${item.Indication ? item.Indication : '---'}</th>
-                            <th>${item.OrderDate}</th>
+                            <th>${(getDateMonthYear(item.OrderDate))}</th>
                             <th>${item.medicineName}</th>
                             <th>${item.DoctorsName}</th>
                             <th>${item.noOfPaitents}</th>
@@ -359,10 +360,7 @@
 
                 $('#downloadExcel > tr').remove();
                 $('#downloadExcel').append(divArray.join(''));
-
             }
-
-
         }
 
         loadDataForReport1();
