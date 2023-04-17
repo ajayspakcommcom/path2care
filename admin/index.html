@@ -6,20 +6,20 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <nav class="navbar">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button> -->
-        <a class="navbar-brand" href="/">
-          <img src="img/logo.png" alt="bsv logo" class="img-responsive" />
-        </a>
-        <h2 class="project-name project-top-name">Admin panel</h2>
-      </div>
+      <a class="navbar-brand" href="/">
+        <img src="img/logo.png" alt="bsv logo" class="img-responsive" />
+      </a>
+      <h2 class="project-name project-top-name">Admin panel</h2>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <!-- Login be111low<br><br> -->
 
@@ -28,76 +28,78 @@
 <label>password</label><br><input type="password" id="password" name="password" placeholder="password"/><br><br> -->
 
 <div class="login-pop screen-1">
-    <div class="modal fade in" id="myModal" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="text-center">
-              <h2 class="project-name">
-                <img src="img/p2c.png" alt="p2c" class="img-response">
-              </h2>
-              <div id="lblmsg"></div>
-              <form class="login-form" id="frm1" method="post" action="/api"  onsubmit="validateAdminUserDetails();return false;">
-                <div class="form-group">
-                  <label for="usr">Username</label>
-                  <input type="text" placeholder="test@bsv.com" id="username" name="username" class="form-control" id="usr" value="admin">
-                </div>
-  
-                <div class="form-group">
-                  <label for="pwd">Password</label>
-                  <input type="password" id="password" name="password" placeholder="password" class="form-control" id="pwd" value="admin">
-                </div>
+  <div class="modal fade in" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-center">
+            <h2 class="project-name">
+              <img src="img/p2c.png" alt="p2c" class="img-response">
+            </h2>
+            <div id="lblmsg"></div>
+            <form class="login-form" id="frm1" method="post" action="/api"
+              onsubmit="validateAdminUserDetails();return false;">
+              <div class="form-group">
+                <label for="usr">Username</label>
+                <input type="text" placeholder="test@bsv.com" id="username" name="username" class="form-control"
+                  id="usr" value="vishal.bajaj@bsvgroup.com">
+              </div>
 
-                  <!-- <label class="checkcontainer">
+              <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" id="password" name="password" placeholder="password" class="form-control"
+                  id="pwd" value="BSV@11223344">
+              </div>
+
+              <!-- <label class="checkcontainer">
                     <span class="checktext">Stay Signed In</span> 
                     <input type="checkbox">
                     <span class="checkmark"></span>
                   </label>   -->
-                  
-                  <div class="login-btn-wrapper">
-                    <button class="btn btn-default btn-grad">Sign In</button>
-                  </div>
-                  <div class="forgot-pass">
-                    <a href="#">Forgot Password?</a>
-                  </div>
 
-              </form>
-             
+              <div class="login-btn-wrapper">
+                <button class="btn btn-default btn-grad">Sign In</button>
+              </div>
+              <div class="forgot-pass">
+                <a href="#">Forgot Password?</a>
+              </div>
 
-            </div>
+            </form>
+
+
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 <!-- <button>Login</button>
 </form>  -->
 
 <div class="copyright">
-    <p>
-      Copyright @ 2022 Bharat Serums and Vaccines Limited (BSV) <br /> Privacy Policy
-    </p>
-  </div>
+  <p>
+    Copyright @ 2022 Bharat Serums and Vaccines Limited (BSV) <br /> Privacy Policy
+  </p>
+</div>
 
-  <img src="img/laxshya-logo.png" alt="laxshya logo" class="img-responsive laxshya-logo" />
+<img src="img/laxshya-logo.png" alt="laxshya logo" class="img-responsive laxshya-logo" />
 
 <script src="js/jquery.min.js"></script>
 <script src="js/admin.js"></script>
 
 <script>
-    
-function changeLogo() {
+
+  function changeLogo() {
     const windowWidth = $(window).width();
-    
-    if(windowWidth < 768) {
+
+    if (windowWidth < 768) {
       $('[src="img/laxshya-logo.png"]').attr('src', 'img/laxshya-logo-m.png');
       setTimeout(() => {
         $('[src="img/logo.png"]').attr('src', 'img/logo-m.png');
       }, 1000);
     }
   }
-  
+
   changeLogo();
 </script>
-
