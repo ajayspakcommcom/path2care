@@ -52,7 +52,6 @@ const htmlTemplate = `
 
 mailOption.MailOptions({ subject: 'Sending Email using Node.js', html: htmlTemplate });
 
-
 const config = {
   server: "P3NWPLSK12SQL-v15.shr.prod.phx3.secureserver.net",
   user: "spakDb",
