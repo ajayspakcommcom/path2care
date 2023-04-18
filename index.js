@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const sql = require("mssql");
 const { isArray } = require("util");
-const mailOption = require('./mail');
+const mailOption = require('./controllers/mail');
 
 
 //app.use(express.static(path.join(__dirname, "public")));
