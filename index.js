@@ -50,7 +50,7 @@ const htmlTemplate = `
     </tr>    
 </tbody></table>`;
 
-mailOption.MailOptions({ subject: 'Sending Email using Node.js', html: htmlTemplate });
+//mailOption.MailOptions({ subject: 'Sending Email using Node.js', html: htmlTemplate });
 
 const config = {
   server: "P3NWPLSK12SQL-v15.shr.prod.phx3.secureserver.net",
