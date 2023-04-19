@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const sql = require("mssql");
 const { isArray } = require("util");
+require('dotenv').config();
 
 
 
@@ -184,6 +185,8 @@ app.post("/api", (req, res) => {
 app.listen(process.env.PORT || 3333, () => {
   //console.clear();
   console.log("Application listening on port 3333!");
+  console.log(process.env.USER_NAME);
+  console.log(process.env.PASSWORD);
 
 });
 
