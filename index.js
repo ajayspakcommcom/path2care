@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const sql = require("mssql");
 const { isArray } = require("util");
-const mailOption = require('./controllers/mail');
+
 
 
 //app.use(express.static(path.join(__dirname, "public")));
@@ -19,38 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
 
-const htmlTemplate = `
-<table border="0" cellpadding="0" cellspacing="0" width="100%">    
-    <tbody>
-    <tr>
-        <td bgcolor="#f4f4f4" align="center" style="padding: 50px;">
-            <table border="0" cellpadding="0" cellspacing="0" width="480">              
-              <tbody><tr>
-                <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px;color: #666666;font-family: 'Lato', Helvetica, Arial, sans-serif;font-size: 18px;font-weight: 400;line-height: 25px;border-top-right-radius: 10px;border-top-left-radius: 10px;">
-                  <p style="margin: 0;">Resetting your password is easy. Just press the button below and follow the instructions. We'll have you up and running in no time. </p>
-                </td>
-              </tr>              
-              <tr>
-                <td bgcolor="#ffffff" align="left">
-                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tbody><tr>
-                      <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;/* border-bottom-right-radius: 10px; *//* border-top-left-radius: 10px; */">
-                        <table border="0" cellspacing="0" cellpadding="0">
-                          <tbody><tr>
-                              <td align="center" style="border-radius: 3px;" bgcolor="#7c72dc"><a href="https://litmus.com" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #7c72dc; display: inline-block;">Reset Password</a></td>
-                          </tr>
-                        </tbody></table>
-                      </td>
-                    </tr>
-                  </tbody></table>
-                </td>
-              </tr>
-            </tbody></table>
-        </td>
-    </tr>    
-</tbody></table>`;
 
-//mailOption.MailOptions({ subject: 'Sending Email using Node.js', html: htmlTemplate });
 
 const config = {
   server: "P3NWPLSK12SQL-v15.shr.prod.phx3.secureserver.net",
