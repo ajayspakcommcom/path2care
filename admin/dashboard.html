@@ -132,8 +132,19 @@
                                     <th>Zone</th>
                                 </tr>
                             </thead>
+                            <!-- <tfoot>
+                                <tr>
+                                    <th>KAM</th>
+                                    <th>Order Date</th>
+                                    <th>Brand</th>
+                                    <th>Doctor</th>
+                                    <th>No of Paitent</th>
+                                    <th>No of Vials</th>
+                                    <th>Hospital</th>
+                                    <th>City</th>
+                                </tr>
+                            </tfoot> -->
                         </table>
-
                     </div>
                 </div>
             </div>
@@ -220,7 +231,6 @@
         }
 
         function loadDataForReport1() {
-
             $('body').addClass('overflow');
             $('.loader-wrapper').removeClass('none');
 
@@ -238,14 +248,11 @@
                 .post("/api", param)
                 .then((response) => {
                     //console.log(response);
-                    //debugger;
+
                     ADMINDATA = [...response.data];
                     loadDropDown();
 
-                    let resultData = response.data.filter(m => m.medicineName.trim() == 'Histoglob' || m.medicineName.trim() == 'Luprodex 22.5mg' || m.medicineName.trim() == 'Luprodex 11.25mg');
-
-                    //populateDataTable(response.data);
-                    populateDataTable(resultData);
+                    populateDataTable(response.data);
                     $('body').removeClass('overflow');
                     $('.loader-wrapper').addClass('none');
                 })
@@ -304,6 +311,7 @@
 
         function populateDataTable(data) {
             console.log('populateDataTable');
+            console.log(data);
             //console.log("populating data table...");
             // clear the table before populating it with more data
             $("#example").DataTable().clear();
