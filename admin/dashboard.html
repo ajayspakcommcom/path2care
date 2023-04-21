@@ -243,7 +243,7 @@
                     loadDropDown();
 
                     let resultData = response.data.filter(m => m.medicineName.trim() == 'Histoglob' || m.medicineName.trim() == 'Luprodex 22.5mg' || m.medicineName.trim() == 'Luprodex 11.25mg');
-                    console.log(resultData);
+
                     //populateDataTable(response.data);
                     populateDataTable(resultData);
                     $('body').removeClass('overflow');
@@ -517,7 +517,7 @@
 
 
         function loadDropDown() {
-            //console.log(ADMINDATA);
+            console.log(ADMINDATA);
             let empCombox = [...new Set(ADMINDATA.map((data) => { return data.Seller }))],
                 medCombox = [...new Set(ADMINDATA.map((data) => { return data.medicineName }))],
                 hospCombox = [...new Set(ADMINDATA.map((data) => { return data.hospitalName }))],
