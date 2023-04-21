@@ -215,7 +215,8 @@ function _loadDashboardReport(objParam) {
         var request = new sql.Request(dbConn);
         request
           .input("empId", sql.Int, ((objParam.empId) || null))
-          .execute("USP_ADMIN_DASHBOARD_MEDICINE")
+          //.execute("USP_ADMIN_DASHBOARD_MEDICINE")
+          .execute("USP_ADMIN_DASHBOARD_MEDICINE_SERAVACC")
           .then(function (resp) {
             resolve(resp);
             dbConn.close();
@@ -310,7 +311,7 @@ function _userLogin(objParam) {
           .input("portalCode", sql.NVarChar, objParam.portalName)
           .execute("USP_VALIDATE_USER")
           .then(function (resp) {
-          //  console.log(resp);
+            //  console.log(resp);
             resolve(resp);
             dbConn.close();
           })
@@ -337,7 +338,7 @@ function _getMedicine(objParam) {
       .then(function () {
         var request = new sql.Request(dbConn);
         request
-        .input("portalCode", sql.NVarChar, objParam.portalName)
+          .input("portalCode", sql.NVarChar, objParam.portalName)
           .execute("USP_GET_MEDICINES_LIST")
           .then(function (resp) {
             //console.log(resp);
