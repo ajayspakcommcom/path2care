@@ -73,7 +73,7 @@ app.post("/api", (req, res) => {
     case "login":
       _userLogin(req.body).then((result) => {
         let response, success, msg, userDetiails;
-        if (result.recordset) {
+        if (result.recordset.length > 0) {
           let rec = result.recordset[0]
           success = true;
           msg = 'Login successful'
@@ -183,7 +183,7 @@ app.post("/api", (req, res) => {
 });
 
 app.listen(process.env.PORT || 3333, () => {
-  //console.clear();
+  console.clear();
   console.log("Application listening on port 3333!");
   console.log(process.env.USER_NAME);
   console.log(process.env.PASSWORD);
@@ -215,7 +215,8 @@ function _loadDashboardReport(objParam) {
         var request = new sql.Request(dbConn);
         request
           .input("empId", sql.Int, ((objParam.empId) || null))
-          .execute("USP_ADMIN_DASHBOARD_MEDICINE")
+          //.execute("USP_ADMIN_DASHBOARD_MEDICINE")
+          .execute("USP_ADMIN_DASHBOARD_MEDICINE_SERAVACC")
           .then(function (resp) {
             resolve(resp);
             dbConn.close();
@@ -294,6 +295,10 @@ function _loadDataForReport1(objParam) {
 }
 
 function _userLogin(objParam) {
+  // console.clear();
+  objParam.portalName = 'SERAVACC'
+  // console.log(objParam);
+  // console.log(process.env.PORTAL_NAME);
   return new Promise((resolve) => {
     var dbConn = new sql.ConnectionPool(config);
     dbConn
@@ -303,9 +308,10 @@ function _userLogin(objParam) {
         request
           .input("email", sql.NVarChar, objParam.email)
           .input("password", sql.NVarChar, objParam.password)
+          .input("portalCode", sql.NVarChar, objParam.portalName)
           .execute("USP_VALIDATE_USER")
           .then(function (resp) {
-            //console.log(resp);
+            //  console.log(resp);
             resolve(resp);
             dbConn.close();
           })
@@ -322,7 +328,8 @@ function _userLogin(objParam) {
 }
 
 function _getMedicine(objParam) {
-  console.log(objParam)
+  //console.log(objParam)
+  objParam.portalName = 'SERAVACC'
   let response;
   return new Promise((resolve) => {
     var dbConn = new sql.ConnectionPool(config);
@@ -331,6 +338,7 @@ function _getMedicine(objParam) {
       .then(function () {
         var request = new sql.Request(dbConn);
         request
+          .input("portalCode", sql.NVarChar, objParam.portalName)
           .execute("USP_GET_MEDICINES_LIST")
           .then(function (resp) {
             //console.log(resp);
