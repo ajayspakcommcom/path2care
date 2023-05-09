@@ -327,7 +327,7 @@ function _userLogin(objParam) {
 }
 
 function _getMedicine(objParam) {
-  console.log(objParam)
+  //console.log(objParam)
   let response;
   return new Promise((resolve) => {
     var dbConn = new sql.ConnectionPool(config);
@@ -336,6 +336,7 @@ function _getMedicine(objParam) {
       .then(function () {
         var request = new sql.Request(dbConn);
         request
+          .input("portalCode", sql.NVarChar, process.env.PORTAL_NAME)
           .execute("USP_GET_MEDICINES_LIST")
           .then(function (resp) {
             //console.log(resp);
