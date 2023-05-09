@@ -314,7 +314,7 @@ label {
 }
 
 .screen-2 {
-  /* position: fixed;
+  position: fixed;
   left: 0;
   right: 0;
   top: 50%;
@@ -322,7 +322,7 @@ label {
   -o-transform: translate(0, -50%);
   -moz-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
-  -webkit-transform: translate(0, -50%); */
+  -webkit-transform: translate(0, -50%);
 }
 
 /* #dvMeds {
@@ -486,7 +486,7 @@ overflow: scroll; */
 }
 
 [src="img/p2c.png"] {
-  width: 120px;
+  width: 200px;
 }
 
 

@@ -748,29 +748,29 @@ input#menu[type="checkbox"] {
 }
 
 #dashboardReport .dashboard-round:nth-child(1)>div {
-  background-color: #da2f27;
+  background-color: #1d85c4;
 }
 
 #dashboardReport .dashboard-round:nth-child(1)>b {
-  color: #da2f27;
+  color: #1d85c4;
 }
 
 
 #dashboardReport .dashboard-round:nth-child(2)>div {
-  background-color: #684d92;
+  background-color: #33376c;
 }
 
 #dashboardReport .dashboard-round:nth-child(2)>b {
-  color: #684d92;
+  color: #33376c;
 }
 
 
 #dashboardReport .dashboard-round:nth-child(3)>div {
-  background-color: #0f5baa;
+  background-color: #53326c;
 }
 
 #dashboardReport .dashboard-round:nth-child(3)>b {
-  color: #0f5baa;
+  color: #53326c;
 }
 
 #dashboardReport .dashboard-round:nth-child(4)>div {
