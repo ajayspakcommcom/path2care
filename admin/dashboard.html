@@ -275,7 +275,8 @@
                 .post("/api", param)
                 .then((response) => {
                     console.log('second data', response.data);
-                    const resultData = response.data.filter(m => !(m.medicineName.trim() == 'Histoglob' || m.medicineName.trim() == 'Luprodex 11.25mg' || m.medicineName.trim() == 'Luprodex 22.5mg' || m.medicineName.trim() == 'U-Tryp'));
+                    const resultData = response.data;
+                    //const resultData = response.data.filter(m => !(m.medicineName.trim() == 'Histoglob' || m.medicineName.trim() == 'Luprodex 11.25mg' || m.medicineName.trim() == 'Luprodex 22.5mg' || m.medicineName.trim() == 'U-Tryp'));
                     let showHtml = '';
                     resultData.forEach((currVal, indx, arr) => {
                         showHtml += ` <div class="dashboard-round">
