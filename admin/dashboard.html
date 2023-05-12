@@ -236,7 +236,8 @@
 
             let param = {
                 method: 'loadDataForReport1',
-                empId: ($('#emp').val() == '0') ? ((localStorage.userData) ? JSON.parse(localStorage.userData).userDetiails.empId : null) : parseInt($('#emp').val()),
+              //  empId: ($('#emp').val() == '0') ? ((localStorage.userData) ? JSON.parse(localStorage.userData).userDetiails.empId : null) : parseInt($('#emp').val()),
+                empId: ($('#emp').val() == '0') ?  null : parseInt($('#emp').val()),
                 medId: ($('#cmbMedicine').val() == '0') ? null : parseInt($('#cmbMedicine').val()),
                 hospitalName: ($('#cmbHospitalList').val() == '0') ? null : ($('#cmbHospitalList').val()), //
                 hospitalCity: ($('#cmbHospitalCity').val() == '0') ? null : ($('#cmbHospitalCity').val()),
@@ -387,7 +388,7 @@
     <script>
         $(function () {
             var dateFormat = "mm/dd/yy",
-                from = $("#from")
+                from = $m("#fro")
                     .datepicker({
                         defaultDate: "+1w",
                         changeMonth: true,
