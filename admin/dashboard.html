@@ -189,7 +189,7 @@
 
             let today = new Date();
             let dd = String(today.getDate()).padStart(2, '0');
-            let mm = String(today.getMonth() + 1).padStart(2, '0');
+            let mm = String(today.getMonth());
             let yyyy = today.getFullYear();
 
             today = dd + '-' + monthNames[mm] + '-' + yyyy;
@@ -204,6 +204,8 @@
         }
 
         $(document).ready(function () {
+            $('#from').val(currentDate())
+            $('#to').val(currentDate())
             $('#example').DataTable({
 
                 "iDisplayLength": 100,
@@ -236,12 +238,12 @@
 
             let param = {
                 method: 'loadDataForReport1',
-                empId: ($('#emp').val() == '0') ? ((localStorage.userData) ? JSON.parse(localStorage.userData).userDetiails.empId : null) : parseInt($('#emp').val()),
+                empId: ($('#emp').val() == '0') ? null : parseInt($('#emp').val()),
                 medId: ($('#cmbMedicine').val() == '0') ? null : parseInt($('#cmbMedicine').val()),
                 hospitalName: ($('#cmbHospitalList').val() == '0') ? null : ($('#cmbHospitalList').val()), //
                 hospitalCity: ($('#cmbHospitalCity').val() == '0') ? null : ($('#cmbHospitalCity').val()),
-                fromDate: ($('#from').val().length === 0) ? null : ($('#from').val()),
-                toDate: ($('#to').val().length === 0) ? null : ($('#to').val())
+                fromDate: ($('#from').val().length === 0) ? currentDate() : ($('#from').val()),
+                toDate: ($('#to').val().length === 0) ? currentDate() : ($('#to').val())
             };
             // console.log(param);
             axios
@@ -274,7 +276,7 @@
             axios
                 .post("/api", param)
                 .then((response) => {
-                    console.log('second data', response.data);
+                    //console.log('second data', response.data);
                     const resultData = response.data;
                     //const resultData = response.data.filter(m => !(m.medicineName.trim() == 'Histoglob' || m.medicineName.trim() == 'Luprodex 11.25mg' || m.medicineName.trim() == 'Luprodex 22.5mg' || m.medicineName.trim() == 'U-Tryp'));
                     let showHtml = '';
@@ -311,16 +313,21 @@
         }
 
         function populateDataTable(data) {
-            console.log('populateDataTable');
-            console.log(data);
+            //console.log('populateDataTable');
+            //console.log(data);
             //console.log("populating data table...");
             // clear the table before populating it with more data
             $("#example").DataTable().clear();
             var length = data.length;
 
             if (length == 0) {
-                console.log(length + '---> len')
-                $("#example").dataTable().empty();
+                //console.log(length + '---> len')
+                //$("#example").dataTable().clear();
+                var table = $('#example').DataTable();
+                table
+                    .clear()
+                    .draw();
+
             } else {
                 data.forEach(item => {
                     $('#example').dataTable().fnAddData([
@@ -473,7 +480,7 @@
             function showRbmLink() {
                 const urlSearchParams = new URLSearchParams(window.location.search);
                 const params = Object.fromEntries(urlSearchParams.entries());
-                console.log(params.isRbm === undefined);
+                //console.log(params.isRbm === undefined);
 
                 if (params.isRbm !== undefined) {
                     if (JSON.parse(params.isRbm)) {
@@ -494,12 +501,12 @@
                 hospText = $('select#hospList option:selected').text(),
                 cityText = $('select#cityList option:selected').text();
 
-            console.log(ADMINDATA);
+            // console.log(ADMINDATA);
 
-            console.log(empText);
-            console.log(medText);
-            console.log(hospText);
-            console.log(cityText);
+            // console.log(empText);
+            // console.log(medText);
+            // console.log(hospText);
+            // console.log(cityText);
 
             let resultData;
             //debugger;
@@ -519,14 +526,14 @@
                 resultData = ADMINDATA.filter(data => (data.Seller === empText) && (data.medicineName === medText) && (data.hospitalName === hospText) && (data.HospitalCity === cityText));
             }
 
-            console.log(resultData);
+            //console.log(resultData);
             populateDataTable(resultData);
 
         }
 
 
         function loadDropDown() {
-            console.log(ADMINDATA);
+            //console.log(ADMINDATA);
             let empCombox = [...new Set(ADMINDATA.map((data) => { return data.Seller }))],
                 medCombox = [...new Set(ADMINDATA.map((data) => { return data.medicineName }))],
                 hospCombox = [...new Set(ADMINDATA.map((data) => { return data.hospitalName }))],

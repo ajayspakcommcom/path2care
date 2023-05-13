@@ -215,7 +215,7 @@ function _loadDashboardReport(objParam) {
         var request = new sql.Request(dbConn);
         request
           .input("empId", sql.Int, ((objParam.empId) || null))
-          .input("portalCode", sql.NVarChar, 'SERAVACC')
+          .input("portalCode", sql.NVarChar, process.env.PORTAL_NAME)
           .execute("USP_ADMIN_DASHBOARD_MEDICINE")
           .then(function (resp) {
             resolve(resp);
@@ -244,7 +244,7 @@ function _loadFilters(objParam) {
         var request = new sql.Request(dbConn);
         request
           .input("empId", sql.Int, ((objParam.empId) || null))
-          .input("portalCode", sql.NVarChar, 'SERAVACC')
+          .input("portalCode", sql.NVarChar, process.env.PORTAL_DIVISION)
           .execute("USP_ADMIN_REPORT_FILTERS")
           .then(function (resp) {
             resolve(resp);
@@ -278,7 +278,7 @@ function _loadDataForReport1(objParam) {
           .input("hospitalCity", sql.NVarChar, ((objParam.hospitalCity) || null))
           .input("fromDate", sql.NVarChar, ((objParam.fromDate) || null))
           .input("toDate", sql.NVarChar, ((objParam.toDate) || null))
-          .input("portalCode", sql.NVarChar, 'SERAVACC')
+          .input("portalCode", sql.NVarChar, process.env.PORTAL_NAME)
           .execute("USP_REPORT_1")
           .then(function (resp) {
             //console.log(resp);
