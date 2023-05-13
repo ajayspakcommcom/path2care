@@ -189,7 +189,8 @@
 
             let today = new Date();
             let dd = String(today.getDate()).padStart(2, '0');
-            let mm = String(today.getMonth() + 1).padStart(2, '0');
+            let mm = String(today.getMonth());
+            //console.log(mm)
             let yyyy = today.getFullYear();
 
             today = dd + '-' + monthNames[mm] + '-' + yyyy;
@@ -204,6 +205,9 @@
         }
 
         $(document).ready(function () {
+            //console.log(currentDate())
+            $("#from").val(currentDate())
+            $("#to").val(currentDate())
             $('#example').DataTable({
 
                 "iDisplayLength": 100,
@@ -241,8 +245,8 @@
                 medId: ($('#cmbMedicine').val() == '0') ? null : parseInt($('#cmbMedicine').val()),
                 hospitalName: ($('#cmbHospitalList').val() == '0') ? null : ($('#cmbHospitalList').val()), //
                 hospitalCity: ($('#cmbHospitalCity').val() == '0') ? null : ($('#cmbHospitalCity').val()),
-                fromDate: ($('#from').val().length === 0) ? null : ($('#from').val()),
-                toDate: ($('#to').val().length === 0) ? null : ($('#to').val())
+                fromDate: ($('#from').val().length === 0) ? currentDate() : ($('#from').val()),
+                toDate: ($('#to').val().length === 0) ? currentDate() : ($('#to').val())
             };
             // console.log(param);
             axios
@@ -275,7 +279,7 @@
             axios
                 .post("/api", param)
                 .then((response) => {
-                    console.log('second data', response.data);
+                    //console.log('second data', response.data);
                     const resultData = response.data;
                     //const resultData = response.data.filter(m => !(m.medicineName.trim() == 'Histoglob' || m.medicineName.trim() == 'Luprodex 11.25mg' || m.medicineName.trim() == 'Luprodex 22.5mg' || m.medicineName.trim() == 'U-Tryp'));
                     let showHtml = '';
@@ -312,8 +316,8 @@
         }
 
         function populateDataTable(data) {
-            console.log('populateDataTable');
-            console.log(data);
+            //console.log('populateDataTable');
+            //console.log(data);
             //console.log("populating data table...");
             // clear the table before populating it with more data
             $("#example").DataTable().clear();
@@ -388,20 +392,20 @@
     <script>
         $(function () {
             var dateFormat = "mm/dd/yy",
-                from = $m("#fro")
+                from = $("#from")
                     .datepicker({
-                        defaultDate: "+1w",
-                        changeMonth: true,
-                        numberOfMonths: 1,
+                        //defaultDate: "+1w",
+                     //   changeMonth: true,
+                        //numberOfMonths: 1,
                         dateFormat: "dd-M-yy"
                     })
                     .on("change", function () {
                         to.datepicker("option", "minDate", getDate(this));
                     }),
                 to = $("#to").datepicker({
-                    defaultDate: "+1w",
-                    changeMonth: true,
-                    numberOfMonths: 1,
+                   // defaultDate: "+1w",
+                   // changeMonth: true,
+                    //numberOfMonths: 1,
                     dateFormat: "dd-M-yy"
                 })
                     .on("change", function () {
@@ -474,7 +478,7 @@
             function showRbmLink() {
                 const urlSearchParams = new URLSearchParams(window.location.search);
                 const params = Object.fromEntries(urlSearchParams.entries());
-                console.log(params.isRbm === undefined);
+                //console.log(params.isRbm === undefined);
 
                 if (params.isRbm !== undefined) {
                     if (JSON.parse(params.isRbm)) {
@@ -527,7 +531,7 @@
 
 
         function loadDropDown() {
-            console.log(ADMINDATA);
+            //console.log(ADMINDATA);
             let empCombox = [...new Set(ADMINDATA.map((data) => { return data.Seller }))],
                 medCombox = [...new Set(ADMINDATA.map((data) => { return data.medicineName }))],
                 hospCombox = [...new Set(ADMINDATA.map((data) => { return data.hospitalName }))],

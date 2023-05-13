@@ -244,7 +244,7 @@ function _loadFilters(objParam) {
         var request = new sql.Request(dbConn);
         request
           .input("empId", sql.Int, ((objParam.empId) || null))
-          .input("portalCode", sql.NVarChar, process.env.PORTAL_NAME)
+          .input("portalCode", sql.NVarChar, process.env.PORTAL_DIVISION)
           .execute("USP_ADMIN_REPORT_FILTERS")
           .then(function (resp) {
             resolve(resp);
@@ -299,7 +299,7 @@ function _loadDataForReport1(objParam) {
 function _userLogin(objParam) {
   // objParam.portalName = ;
   // console.clear();
-  // console.log(objParam.portalName)
+   //console.log(process.env.PORTAL_DIVISION)
   // console.log(objParam.portalName.length)
   return new Promise((resolve) => {
     var dbConn = new sql.ConnectionPool(config);
