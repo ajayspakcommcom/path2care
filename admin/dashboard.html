@@ -324,8 +324,11 @@
             var length = data.length;
 
             if (length == 0) {
-                console.log(length + '---> len')
-                $("#example").dataTable().empty();
+                //console.log(length + '---> len')
+                var table = $('#example').DataTable();
+                table
+                    .clear()
+                    .draw();
             } else {
                 data.forEach(item => {
                     $('#example').dataTable().fnAddData([
