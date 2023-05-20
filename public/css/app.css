@@ -313,6 +313,14 @@ label {
   bottom: 5px;
 }
 
+.reportees-wrapper {
+  background-color: #fff;
+}
+
+.reportees-wrapper .tab-content {
+  margin-top: 20px;
+}
+
 .screen-2 {
   /* position: fixed;
   left: 0;

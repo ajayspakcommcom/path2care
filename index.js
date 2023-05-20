@@ -166,6 +166,12 @@ app.post("/api", (req, res) => {
       });
       break;
 
+    case "getPath2CareDailyReport":
+      _getPath2CareDailyReport(req.body).then((response) => {
+        res.status(200).json(response.recordsets);
+      });
+      break;
+
     // case "bucket":
     //   questionHTML = renderBucketQuestion(matchingQuestion);
     //   break;
@@ -189,6 +195,32 @@ app.listen(process.env.PORT || 3333, () => {
   console.log(process.env.PASSWORD);
 
 });
+
+function _getPath2CareDailyReport(objParam) {
+  console.log(objParam)
+  return new Promise((resolve) => {
+    var dbConn = new sql.ConnectionPool(config);
+    dbConn
+      .connect()
+      .then(function () {
+        var request = new sql.Request(dbConn);
+        request
+          .input("dt", sql.Date, objParam.date)
+          .execute("USP_PATH2CARE_DAILY_REPORT")
+          .then(function (resp) {
+            resolve(resp);
+            dbConn.close();
+          })
+          .catch(function (err) {
+            console.log(err);
+            dbConn.close();
+          });
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  });
+}
 
 function _prepareResponse(response, flag = true) {
   console.log(response)
@@ -299,7 +331,7 @@ function _loadDataForReport1(objParam) {
 function _userLogin(objParam) {
   // objParam.portalName = ;
   // console.clear();
-   //console.log(process.env.PORTAL_DIVISION)
+  //console.log(process.env.PORTAL_DIVISION)
   // console.log(objParam.portalName.length)
   return new Promise((resolve) => {
     var dbConn = new sql.ConnectionPool(config);
