@@ -90,7 +90,7 @@ function LoadMedicine() {
             <div class="product-wrapper">
               <img src="img/meds/${med.imageURL}" alt="${med.name}" class="img-responsive" />
               <div class="product-btn">
-                <button type="button" class="btn btn-default btn-grad select-btn" onclick="showlogDataForm(${med.medID})">Select</button>
+                <button type="button" class="btn btn-default btn-grad select-btn" onclick="showlogDataForm(${med.medID}, '${med.name}')">Select</button>
               </div>
             </div>
           </div>
@@ -112,22 +112,34 @@ function hideForm() {
 }
 
 
-function showlogDataForm(medId) {
-    // console.log(medId);
+function showlogDataForm(medId, name) {
+  //console.log(medId);
+  //console.log(name.split(' ').join('').toUpperCase());
+  let medName = name.split(' ').join('').toUpperCase();
+  
+  switch (medName) {
+    case 'HISTOGLOB': SpecialityDropdown(['ENT', 'Derma', 'CP', 'Chest Phy', 'Pulmonologist', 'Pedia', 'GP']);
+      IndicationDropdown(['Allergic rhinitis', 'atopic Dermatitis', 'Asthma, Urticaria(Hives)', 'Eczema', 'Chronic Bronchitis']);
+      break;
+    case 'LUPRODEX11.25MG':
+    case 'LUPRODEX22.5MG':
+      SpecialityInput(); IndicationInput();
+      break;
+  }
+
     $('.screen-2').addClass('hide');
     $('#dvform').removeClass('none');
     $('#dvMeds').hide();
     $('#frmLogData').show();
     $('.screen-3').removeClass('hide');
     $('.object-form').removeClass('hide');
-    $('.thank-you-wrapper').addClass('hide'); 
-    console.log(medId);
+    $('.thank-you-wrapper').addClass('hide');     
     const selectedMedId = $('#txtSelectedMedId').val(medId);
     setupLogDataForm(medId);
 }
 
 function setupLogDataForm(selectedMedId) {
-    console.log('Ram',selectedMedId);
+    //console.log('Ram',selectedMedId);
     let userDetails = JSON.parse(localStorage.getItem("userData"));
     hospitalList = userDetails.userHospitalList;
     $('#hospitalList').empty();
@@ -149,6 +161,8 @@ function setupLogDataForm(selectedMedId) {
       } else {
         $('.objective').removeClass('hide');
       }
+
+      
 }
 
   
@@ -190,14 +204,12 @@ function validateLogData() {
     return false;
   }
 
-  if ($("#txtDrCode").val() === "") {
-    alert("please enter Dr Code");
-    $("#txtDrCode").focus();
-    return false;
-  }
+  // if ($("#txtDrCode").val() === "") {
+  //   alert("please enter Dr Code");
+  //   $("#txtDrCode").focus();
+  //   return false;
+  // }
 
-
-  
 
   if ($("#txtPaitentName").val() === "") {
     alert("please enter name of the paitent");
@@ -241,6 +253,9 @@ function validateLogData() {
     medId: $("#txtSelectedMedId").val(),
     indication: $("#txtIndication").val(),
     speciality: $("#txtSpeciality").val(),
+    prescriptions: $('#prescriptions').val(),
+    strips: $('#strips').val(),
+    TotalValue: $('#txtTotalValue').val(),
     empId: userDetails.userDetiails.empId,
     method: 'dataLog'
   };

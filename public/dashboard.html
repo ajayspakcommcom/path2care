@@ -87,6 +87,67 @@
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="form-group">
+                          <label for="txtDrName">Doctor Name</label>
+                          <input type="text" id="txtDrName" name="txtDrName" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="txtDrCode">Doctor Code</label>
+                          <input type="text" class="form-control" id="txtDrCode" name="txtDrCode" />
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="hospitalList">Name of the Hospital/Clinic</label>
+                          <input type="text" class="form-control" id="hospitalList" name="hospitalList" />
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="txtCity">City</label>
+                          <input type="text" class="form-control" id="txtCity" />
+                        </div>
+                      </div>
+
+                      
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                        <!-- <div class="form-group" id="specialityField">
+                          <label for="txtSpeciality">Speciality</label>
+                          <input type="text" class="form-control" id="txtSpeciality" maxlength="99" />
+                        </div> -->
+
+                        <!-- <div class="form-group">
+                          <label for="txtSpeciality">Speciality</label>
+                          <select class="form-control" id="txtSpeciality" name="txtSpeciality"></select>
+                        </div> -->
+
+                        <div class="form-group" id="specialityField"></div>
+
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                        <!-- <div class="form-group">
+                          <label for="txtIndication">Indication</label>
+                          <input type="text" class="form-control" id="txtIndication" name="txtIndication" maxlength="99" />
+                        </div> -->
+
+                        <!-- <div class="form-group">
+                          <label for="txtIndication">Indication</label>
+                          <select class="form-control" id="txtIndication" name="txtIndication"></select>
+                        </div> -->
+
+                        <div class="form-group" id="indicationField"></div>
+
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
                           <label for="patients">No. of Patients</label>
                           <select class="form-control" id="patients" name="patients">
                             <option value="0">0</option>
@@ -103,86 +164,37 @@
                           </select>
                         </div>
                       </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="form-group">
-                          <label for="txtDrName">Doctor Name</label>
-                          <input type="text" id="txtDrName" name="txtDrName" class="form-control" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label for="txtDrCode">Doctor Code</label>
-                          <input type="text" class="form-control" id="txtDrCode" name="txtDrCode" />
-                        </div>
-                      </div>
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="form-group">
                           <label for="vials">No. of Vials</label>
-                          <select class="form-control" id="vials" name="vials">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                          </select>
+                          <select class="form-control" id="vials" name="vials"></select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="prescriptions">No. of Prescriptions</label>
+                          <select class="form-control" id="prescriptions" name="prescriptions"></select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="strips">No. of strips</label>
+                          <select class="form-control" id="strips" name="strips"></select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label for="txtTotalValue">Total Value</label>
+                          <input type="text" class="form-control" id="txtTotalValue" />
                         </div>
                       </div>
 
                     </div>
 
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-
-                        <!-- <div class="form-group">
-                          <label for="hospitalList">Name of the Hospital</label>
-                          <select class="form-control" id="hospitalList" name="hospitalList">
-                            <option value="xxx">XXX</option>
-                            <option value="zzz">ZZZ</option>
-                          </select>
-                        </div> -->
-
-                        <div class="form-group">
-                          <label for="hospitalList">Name of the Clinic</label>
-                          <input type="text" class="form-control" id="hospitalList" name="hospitalList" />
-                        </div>
-
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label for="txtCity">City</label>
-                          <input type="text" class="form-control" id="txtCity" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label for="txtIndication">Indication</label>
-                          <input type="text" class="form-control" id="txtIndication" name="txtIndication"
-                            maxlength="99" />
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label for="txtSpeciality">Speciality</label>
-                          <input type="text" class="form-control" id="txtSpeciality" maxlength="99" />
-                        </div>
-                      </div>
-                    </div>
 
                     <div class="row">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -234,16 +246,23 @@
     loadUserDetails();
   }, 500);
 
-  function appendOptionList() {
+  function appendOptionList(id) {
     let optionList;
     for (let i = 0; i <= 100; i++) {
       optionList += `<option value="${i}">${i}</option>`;
     }
-    $('#vials').html(optionList);
-  }
+    //$('#vials').html(optionList);
+    $(`#${id}`).html(optionList);
+  } 
 
   $(document).ready(function () {
-    appendOptionList();
+    appendOptionList('vials'); 
+    appendOptionList('prescriptions'); 
+    appendOptionList('strips'); 
   });
+
+
+
+
 
 </script>
