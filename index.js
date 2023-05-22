@@ -375,6 +375,7 @@ function _dataLog(objParam) {
           .input("prescriptions", sql.NVarChar, objParam.prescriptions)
           .input("strips", sql.NVarChar, objParam.strips)
           .input("TotalValue", sql.NVarChar, objParam.TotalValue)
+          .input("arc", sql.NVarChar, objParam.arc)
           .execute("USP_LOG_USER_MEDICINE_DETAILS")
           .then(function (resp) {
             //console.log(resp);
