@@ -86,7 +86,7 @@ function LoadMedicine() {
       let divArray = []
       //console.log(medDetails);
       medDetails.forEach(med => {
-        //console.log(med);
+        console.log(med);
         let divData = `<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <div class="product-wrapper">
               <img src="img/meds/${med.imageURL}" alt="${med.name}" class="img-responsive" />
