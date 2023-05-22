@@ -176,7 +176,7 @@ function setupLogDataForm(selectedMedId) {
   const selectedMed = medData.find(({ medID }) => medID === medId);
 
   $('#selectedMedImg').attr('src', `img/meds/${selectedMed.imageURL}`);
-  selectedMed.descp = '5 patients per month';
+  //selectedMed.descp = '5 patients per month';
   $('#selectedMedTxt').text(selectedMed.descp);
   $('#selectedMedObj').text(selectedMed.objective);
 

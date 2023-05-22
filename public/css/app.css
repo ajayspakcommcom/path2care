@@ -394,6 +394,7 @@ label {
 
 .prod-desc {
   color: #4d4d4d;
+  display: none;
 }
 
 .objective {
@@ -405,6 +406,7 @@ label {
   background: #00b8cc;
   color: #fff;
   overflow-y: auto;
+  margin-top: 15px;
   /* height: 90px; */
 }
 
