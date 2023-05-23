@@ -246,6 +246,10 @@ function validateLogData() {
     indication: $("#txtIndication").val(),
     speciality: $("#txtSpeciality").val(),
     empId: userDetails.userDetiails.empId,
+    prescriptions: null,
+    strips: null,
+    TotalValue: null,
+    arc: null,
     method: 'dataLog'
   };
 
