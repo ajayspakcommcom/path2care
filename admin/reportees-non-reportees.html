@@ -1,0 +1,186 @@
+<html class="openNav">
+
+<head>
+    <title>Path 2 Care: Reportees and Non Reportees</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="application/vnd.ms-excel;" charset="UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" /> -->
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+    <script src="/admin/js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="primary-nav" id="loadAdminHeader"></div>
+    <div class="new-wrapper">
+
+        <div id="main">
+            <div class="main-website-link">
+                <a href="/" target="_blank">
+                    <img src="img/p2c.png" alt="path 2" />
+                </a>
+            </div>
+            <div id="main-contents">
+
+                <div class="text-right export-excel reportees">
+                    <a href="javascript:void(0);" type="button" id="exporttoexcel" onclick="downloadReport()">
+                        <img src="admin/img/excel.png" alt="export to excel">
+                    </a>
+                </div>
+                <ul class="nav nav-tabs reportees-tabs">
+                    <li class="active"><a data-toggle="tab" href="#reportees">Reportees</a></li>
+                    <li><a data-toggle="tab" href="#nonReportees">Non Reportees</a></li>
+                </ul>
+
+                <div class="reportees-wrapper">
+                    <div class="tab-content">
+                        <div id="reportees" class="tab-pane fade in active">
+                            <table class="table table-bordered table-hover" id="reportees-table">
+                                <thead>
+                                    <tr>
+                                        <th>Zone</th>
+                                        <th>Rbm</th>
+                                        <th>Kam</th>
+                                        <!-- <th>Patients</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody id="reporteesList"></tbody>
+                            </table>
+                        </div>
+                        <div id="nonReportees" class="tab-pane fade">
+                            <table class="table table-bordered table-hover" id="non-reportees-table">
+                                <thead>
+                                    <tr>
+                                        <th>Zone</th>
+                                        <th>Rbm</th>
+                                        <th>Kam</th>
+                                        <!-- <th>Patients</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody id="nonReporteesList"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="loader-wrapper none">
+        <div class="loader"></div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.15/plugins/export/libs/FileSaver.js/FileSaver.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/xlsx.full.min.js"></script>
+
+    <!-- <script src="admin/js/jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script> 
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" />
+    -->
+
+    <script src="/admin/js/admin.js"></script>
+    <script>
+        function getPath2CareDailyReport() {
+            $('.loader-wrapper').removeClass('none');
+            console.log('getPath2CareDailyReport Executed');
+            let param = {
+                method: 'getPath2CareDailyReport',
+                date: new Date()
+            };
+            axios
+                .post("/api", param)
+                .then((response) => {
+                    console.log(response);
+
+                    let reporteesList = response.data[0], nonReporteesList = response.data[1], reporteesHtml = [], nonReporteesHtml = [];
+
+                    for (let item of reporteesList) {
+                        reporteesHtml.push(`<tr>
+                    <td>${item.zoneName}</td>
+                    <td>${item.RBM}</td>
+                    <td>${item.kamName}</td>    
+                    <!--<td>${item.EmpID}</td>-->
+                </tr>`);
+                    }
+
+                    for (let item of nonReporteesList) {
+                        nonReporteesHtml.push(`<tr>
+                    <td>${item.zoneName}</td>
+                    <td>${item.RBM}</td>
+                    <td>${item.kamName}</td>    
+                    <!--<td>${item.EmpID}</td>-->
+                </tr>`);
+
+                        $('#reporteesList').html(reporteesHtml.join(''));
+                        $('#nonReporteesList').html(nonReporteesHtml.join(''));
+                    }
+
+                    $('.loader-wrapper').addClass('none');
+
+                });
+        }
+
+        getPath2CareDailyReport();
+
+        function downloadReport() {
+            let elt = document.getElementById('reportees-table');
+            let elt2 = document.getElementById('non-reportees-table');
+
+            let ws1 = XLSX.utils.table_to_sheet(elt);
+            let ws2 = XLSX.utils.table_to_sheet(elt2);
+
+            let wb = XLSX.utils.book_new();
+
+            XLSX.utils.book_append_sheet(wb, ws1, "Reportees");
+            XLSX.utils.book_append_sheet(wb, ws2, "Non Reportees");
+
+            let wbout = XLSX.write(wb, {
+                bookType: 'xlsx',
+                bookSST: true,
+                type: 'binary'
+            });
+
+            function s2ab(s) {
+                let buf = new ArrayBuffer(s.length);
+                let view = new Uint8Array(buf);
+                for (let i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+                return buf;
+            }
+
+            function downloadXlsx() {
+                saveAs(new Blob([s2ab(wbout)], {
+                    type: "application/octet-stream"
+                }), 'reports.xlsx');
+            }
+            downloadXlsx();
+        }
+    </script>
+
+
+</body>
+
+</html>

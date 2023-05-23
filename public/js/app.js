@@ -366,10 +366,9 @@ function getPath2CareDailyReport() {
   axios
     .post("/api", param)
     .then((response) => {
+      console.log(response);
 
       let reporteesList = response.data[0], nonReporteesList = response.data[1], reporteesHtml = [], nonReporteesHtml = [];
-
-
 
       for (let item of reporteesList) {
         reporteesHtml.push(`<tr>

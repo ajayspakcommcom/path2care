@@ -1634,6 +1634,12 @@ div#example_filter,
   display: block;
 }
 
+.export-excel.reportees {
+  position: relative;
+  top: 30px;
+  padding-bottom: 0;
+}
+
 .export-excel.m-t-30 {
   margin-top: 30px;
 }
@@ -1674,6 +1680,17 @@ div#example_filter,
 
 .hide {
   display: none;
+}
+
+.reportees-tabs>li>a {
+  font-size: 14px;
+}
+
+.reportees-tabs>li.active>a,
+.reportees-tabs>li.active>a:focus,
+.reportees-tabs>li.active>a:hover {
+  color: #fff;
+  background-color: #0072c0;
 }
 
 /* Medium Screen Typography - Scale: 1.333 Perfect Fourth (thanks http://type-scale.com/)  */

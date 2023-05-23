@@ -45,6 +45,11 @@ app.get("/admin-dashbaord", (req, res) => {
   res.sendFile(`${__dirname}/admin/dashboard.html`);
 });
 
+app.get("/reportees-non-reportees", (req, res) => {
+  console.log('h3ere')
+  res.sendFile(`${__dirname}/admin/reportees-non-reportees.html`);
+});
+
 
 app.get("/report", (req, res) => {
   console.log('report1')
