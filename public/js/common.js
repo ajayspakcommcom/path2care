@@ -23,7 +23,7 @@ function SpecialityDropdown(arrVal) {
   }
 
   let comboxHtml = `<label for="txtSpeciality">Speciality</label>
-                  <select class="form-control" id="txtSpeciality" name="txtSpeciality">${optionList}</select>`; 
+                  <select class="form-control" id="txtSpeciality" name="txtSpeciality">${optionList}</select>`;
   $('#specialityField').html(comboxHtml);
 }
 
@@ -47,4 +47,6 @@ function IndicationInput() {
   let inputField = `<label for="txtIndication">Indication</label><input type="text" class="form-control" id="txtIndication" name="txtIndication" maxlength="99" />`;
   $('#indicationField').html(inputField);
 }
+
+
 

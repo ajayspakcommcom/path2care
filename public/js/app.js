@@ -86,7 +86,7 @@ function LoadMedicine() {
       let divArray = []
       //console.log(medDetails);
       medDetails.forEach(med => {
-        console.log(med);
+        //console.log(med);
         let divData = `<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <div class="product-wrapper">
               <img src="img/meds/${med.imageURL}" alt="${med.name}" class="img-responsive" />
@@ -117,36 +117,42 @@ function showlogDataForm(medId, name) {
   //console.log(medId);
   console.log(name.split(' ').join('').toUpperCase());
   let medName = name.split(' ').join('').toUpperCase();
+  console.log(medName);
 
   switch (medName) {
     case 'HISTOGLOB': SpecialityDropdown(['ENT', 'Derma', 'CP', 'Chest Phy', 'Pulmonologist', 'Pedia', 'GP']);
       IndicationDropdown(['Allergic rhinitis', 'atopic Dermatitis', 'Asthma, Urticaria(Hives)', 'Eczema', 'Chronic Bronchitis']);
       $('.totalVal-wrapper').addClass('none');
       $('.arc-wrapper').addClass('none');
+      $('.strip-wrapper').removeClass('none');
       break;
     case 'LUPRODEX11.25MG':
     case 'LUPRODEX22.5MG':
       SpecialityInput(); IndicationInput();
       $('.totalVal-wrapper').addClass('none');
       $('.arc-wrapper').addClass('none');
+      $('.strip-wrapper').addClass('none');
       break;
     case 'ASVS':
       $('.totalVal-wrapper').removeClass('none');
       $('.arc-wrapper').addClass('none');
       SpecialityDropdown(['Emergency Medicine / Trauma', 'CP', 'GP', 'Pedia', 'Surgeons']);
       IndicationDropdown(['Snake Bite']);
+      $('.strip-wrapper').addClass('none');
       break;
     case 'EQUIRAB':
       $('.totalVal-wrapper').removeClass('none');
       $('.arc-wrapper').removeClass('none');
       SpecialityDropdown(['Emergency Medicine / Trauma', 'CP', 'GP', 'Pedia', 'Surgeons']);
-      IndicationDropdown(['Category 3 Dog bite', 'Category 4 Dog bite']);
+      IndicationDropdown(['Category 2 Dog bite', 'Category 3 Dog bite']);
+      $('.strip-wrapper').addClass('none');
       break;
     case 'ZOONOVAC':
       $('.totalVal-wrapper').removeClass('none');
       $('.arc-wrapper').removeClass('none');
       SpecialityDropdown(['Emergency Medicine / Trauma', 'CP', 'GP', 'Pedia', 'Surgeons']);
-      IndicationDropdown(['Category 3 Dog bite', 'Category 4 Dog bite']);
+      IndicationDropdown(['Category 2 Dog bite', 'Category 3 Dog bite']);
+      $('.strip-wrapper').addClass('none');
       break;
   }
 
