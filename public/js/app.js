@@ -125,6 +125,12 @@ function showlogDataForm(medId, name) {
       $('.totalVal-wrapper').addClass('none');
       $('.arc-wrapper').addClass('none');
       $('.strip-wrapper').removeClass('none');
+
+      $('.target-wrapper').removeClass('none');
+      $('.pressType-wrapper').removeClass('none');
+
+
+
       break;
     case 'LUPRODEX11.25MG':
     case 'LUPRODEX22.5MG':
@@ -132,6 +138,10 @@ function showlogDataForm(medId, name) {
       $('.totalVal-wrapper').addClass('none');
       $('.arc-wrapper').addClass('none');
       $('.strip-wrapper').addClass('none');
+
+      $('.target-wrapper').addClass('none');
+      $('.pressType-wrapper').addClass('none');
+
       break;
     case 'ASVS':
       $('.totalVal-wrapper').removeClass('none');
@@ -139,6 +149,8 @@ function showlogDataForm(medId, name) {
       SpecialityDropdown(['Emergency Medicine / Trauma', 'CP', 'GP', 'Pedia', 'Surgeons']);
       IndicationDropdown(['Snake Bite']);
       $('.strip-wrapper').addClass('none');
+      $('.target-wrapper').addClass('none');
+      $('.pressType-wrapper').addClass('none');
       break;
     case 'EQUIRAB':
       $('.totalVal-wrapper').removeClass('none');
@@ -146,6 +158,10 @@ function showlogDataForm(medId, name) {
       SpecialityDropdown(['Emergency Medicine / Trauma', 'CP', 'GP', 'Pedia', 'Surgeons']);
       IndicationDropdown(['Category 2 Dog bite', 'Category 3 Dog bite']);
       $('.strip-wrapper').addClass('none');
+
+      $('.target-wrapper').removeClass('none');
+      $('.pressType-wrapper').removeClass('none');
+
       break;
     case 'ZOONOVAC':
       $('.totalVal-wrapper').removeClass('none');
@@ -153,6 +169,8 @@ function showlogDataForm(medId, name) {
       SpecialityDropdown(['Emergency Medicine / Trauma', 'CP', 'GP', 'Pedia', 'Surgeons']);
       IndicationDropdown(['Category 2 Dog bite', 'Category 3 Dog bite']);
       $('.strip-wrapper').addClass('none');
+      $('.target-wrapper').addClass('none');
+      $('.pressType-wrapper').addClass('none');
       break;
   }
 
@@ -288,6 +306,8 @@ function validateLogData() {
     TotalValue: $('#txtTotalValue').val(),
     empId: userDetails.userDetiails.empId,
     arc: $('#arcComb').val(),
+    PrescriberType: $('#combPresType').val(),
+    Target: $('#txtTargetValue').val(),
     method: 'dataLog'
   };
 

@@ -17,7 +17,7 @@ $(document).ready(function () {
 });
 
 function SpecialityDropdown(arrVal) {
-  let optionList;
+  let optionList = `<option value="">Select</option>`;
   for (let val of arrVal) {
     optionList += `<option value="${val}">${val}</option>`;
   }
@@ -33,7 +33,7 @@ function SpecialityInput() {
 }
 
 function IndicationDropdown(arrVal) {
-  let optionList;
+  let optionList = `<option value="">Select</option>`;
   for (let val of arrVal) {
     optionList += `<option value="${val}">${val}</option>`;
   }

@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="./css/app.css" />
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<title>Path 2 Care : Dashboard</title>
+<title>Servacc : Dashboard</title>
 
 <style>
   #dvMeds>div:nth-child(7) {
@@ -193,13 +193,32 @@
                         </div>
                       </div>
 
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 arc-wrapper none">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 arc-wrapper none">
                         <div class="form-group">
-                          <label for="arcComb">Order from ARC Center/Trade doctor</label>
+                          <label for="arcComb">ARC Center/Trade doctor</label>
                           <select class="form-control" id="arcComb" name="arcComb">
+                            <option value="">Select</option>
                             <option value="ARC Centre">ARC Centre</option>
                             <option value="Trade Doctor">Trade Doctor</option>
                           </select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pressType-wrapper none">
+                        <div class="form-group" id="PrescriberTypeField">
+                          <label for="txtIndication">PrescriberType</label>
+                          <select class="form-control" id="combPresType" name="combPresType">
+                            <option value="">Select</option>
+                            <option value="New">New</option>
+                            <option value="Existing">Existing</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 target-wrapper none">
+                        <div class="form-group">
+                          <label for="txtTargetValue">Target Value</label>
+                          <input type="text" class="form-control" id="txtTargetValue" />
                         </div>
                       </div>
 

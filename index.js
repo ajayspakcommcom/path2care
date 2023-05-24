@@ -372,10 +372,12 @@ function _dataLog(objParam) {
           .input("HospitalCity", sql.NVarChar, objParam.hospitalCity)
           .input("indication", sql.NVarChar, objParam.indication)
           .input("speciality", sql.NVarChar, objParam.speciality)
-          .input("prescriptions", sql.NVarChar, objParam.prescriptions)
-          .input("strips", sql.NVarChar, objParam.strips)
-          .input("TotalValue", sql.NVarChar, objParam.TotalValue)
-          .input("arc", sql.NVarChar, objParam.arc)
+          .input("prescriptions", sql.NVarChar, objParam.prescriptions || null)
+          .input("strips", sql.NVarChar, objParam.strips || null)
+          .input("TotalValue", sql.NVarChar, objParam.TotalValue || null)
+          .input("arc", sql.NVarChar, objParam.arc || null)
+          .input("PrescriberType", sql.NVarChar, objParam.PrescriberType || null)
+          .input("Target", sql.NVarChar, objParam.Target || null)
           .execute("USP_LOG_USER_MEDICINE_DETAILS")
           .then(function (resp) {
             //console.log(resp);
