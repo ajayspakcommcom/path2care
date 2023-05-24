@@ -126,7 +126,7 @@ function showlogDataForm(medId, name) {
       $('.arc-wrapper').addClass('none');
       $('.strip-wrapper').removeClass('none');
 
-      $('.target-wrapper').removeClass('none');
+      //$('.target-wrapper').removeClass('none');
       $('.pressType-wrapper').removeClass('none');
 
 
@@ -139,7 +139,7 @@ function showlogDataForm(medId, name) {
       $('.arc-wrapper').addClass('none');
       $('.strip-wrapper').addClass('none');
 
-      $('.target-wrapper').addClass('none');
+      //$('.target-wrapper').addClass('none');
       $('.pressType-wrapper').addClass('none');
 
       break;
@@ -159,7 +159,7 @@ function showlogDataForm(medId, name) {
       IndicationDropdown(['Category 2 Dog bite', 'Category 3 Dog bite']);
       $('.strip-wrapper').addClass('none');
 
-      $('.target-wrapper').removeClass('none');
+      //$('.target-wrapper').removeClass('none');
       $('.pressType-wrapper').removeClass('none');
 
       break;
@@ -169,7 +169,7 @@ function showlogDataForm(medId, name) {
       SpecialityDropdown(['Emergency Medicine / Trauma', 'CP', 'GP', 'Pedia', 'Surgeons']);
       IndicationDropdown(['Category 2 Dog bite', 'Category 3 Dog bite']);
       $('.strip-wrapper').addClass('none');
-      $('.target-wrapper').addClass('none');
+      //$('.target-wrapper').addClass('none');
       $('.pressType-wrapper').addClass('none');
       break;
   }
