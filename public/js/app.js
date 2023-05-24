@@ -250,6 +250,8 @@ function validateLogData() {
     strips: null,
     TotalValue: null,
     arc: null,
+    PrescriberType: null,
+    Target: null,
     method: 'dataLog'
   };
 
