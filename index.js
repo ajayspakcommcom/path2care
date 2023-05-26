@@ -45,6 +45,11 @@ app.get("/admin-dashbaord", (req, res) => {
   res.sendFile(`${__dirname}/admin/dashboard.html`);
 });
 
+app.get("/reportees-non-reportees", (req, res) => {
+  console.log('h3ere')
+  res.sendFile(`${__dirname}/admin/reportees-non-reportees.html`);
+});
+
 
 app.get("/report", (req, res) => {
   console.log('report1')
@@ -165,6 +170,11 @@ app.post("/api", (req, res) => {
         res.status(200).json({ message: "badge earned sucessfully" });
       });
       break;
+    case "getServaccDailyReport":
+      _getServaccDailyReport(req.body).then((response) => {
+        res.status(200).json(response.recordsets);
+      });
+      break;
 
     // case "bucket":
     //   questionHTML = renderBucketQuestion(matchingQuestion);
@@ -201,6 +211,33 @@ function _prepareResponse(response, flag = true) {
   }
   return res;
 
+}
+
+
+function _getServaccDailyReport(objParam) {
+  console.log(objParam)
+  return new Promise((resolve) => {
+    var dbConn = new sql.ConnectionPool(config);
+    dbConn
+      .connect()
+      .then(function () {
+        var request = new sql.Request(dbConn);
+        request
+          .input("dt", sql.Date, objParam.date)
+          .execute("USP_SERAVACC_DAILY_REPORT")
+          .then(function (resp) {
+            resolve(resp);
+            dbConn.close();
+          })
+          .catch(function (err) {
+            console.log(err);
+            dbConn.close();
+          });
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  });
 }
 
 
