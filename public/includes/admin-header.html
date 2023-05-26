@@ -7,7 +7,9 @@
     <div class="overflow-container">
         <ul class="menu-dropdown">
             <li class="rbmLink hide"><a href="/dashboard.html" class="dropdown-btn">Home</a></li>
-            <li class="menu-hasdropdown">
+            <li class="rbmLink"><a href="/admin-dashbaord" class="dropdown-btn">Dashboard</a></li>
+            <li class="rbmLink"><a href="/reportees-non-reportees">Reportees and Non Reportees</a></li>
+            <!-- <li class="menu-hasdropdown">
                 <div class="dropdown-btnwrapper">
                     <a href="javascript:void(0);" class="dropdown-btn">Reports</a>
                     <img src="/admin/img/down-arrow.png" alt="icon" class="drop-icon" />
@@ -15,14 +17,14 @@
                 <ul class="sub-menu-dropdown">
                     <li><a href="/report">Report 1</a></li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>
 
 <script>
     $('.dropdown-btnwrapper').on('click', function () {
-            let $this = $(this);
-            $this.parents('.menu-hasdropdown').find('.sub-menu-dropdown').toggleClass('active');
-        });
+        let $this = $(this);
+        $this.parents('.menu-hasdropdown').find('.sub-menu-dropdown').toggleClass('active');
+    });
 </script>
