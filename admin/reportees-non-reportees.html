@@ -105,11 +105,16 @@
     <script src="/admin/js/admin.js"></script>
     <script>
         function getPath2CareDailyReport() {
+
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const date = new Date();
+            let day = weekday[date.getDay()];
+
             $('.loader-wrapper').removeClass('none');
             console.log('getPath2CareDailyReport Executed');
             let param = {
                 method: 'getPath2CareDailyReport',
-                date: new Date()
+                date: day == 'Monday' ? new Date(date.setDate(date.getDate() - 2)) : new Date(date.setDate(date.getDate() - 1))
             };
             axios
                 .post("/api", param)
@@ -129,11 +134,11 @@
 
                     for (let item of nonReporteesList) {
                         nonReporteesHtml.push(`<tr>
-                    <td>${item.zoneName}</td>
-                    <td>${item.RBM}</td>
-                    <td>${item.kamName}</td>    
-                    <!--<td>${item.EmpID}</td>-->
-                </tr>`);
+                            <td>${item.zoneName}</td>
+                            <td>${item.RBM}</td>
+                            <td>${item.kamName}</td>    
+                            <!--<td>${item.EmpID}</td>-->
+                        </tr>`);
 
                         $('#reporteesList').html(reporteesHtml.join(''));
                         $('#nonReporteesList').html(nonReporteesHtml.join(''));
