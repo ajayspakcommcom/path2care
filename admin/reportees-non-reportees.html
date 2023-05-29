@@ -13,6 +13,14 @@
     <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" /> -->
     <link rel="stylesheet" href="/admin/css/admin.css" />
     <script src="/admin/js/jquery.min.js"></script>
+
+    <style>
+        .form-control {
+            height: 34px;
+            border-radius: 5px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -33,8 +41,30 @@
                         <img src="admin/img/excel.png" alt="export to excel">
                     </a>
                 </div>
+
+                <form>
+
+                    <div class="row">
+                        <div class="col-lg-3 com-md-3 col-sm-3 col-xs-12">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" id="date" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 com-md-3 col-sm-3 col-xs-12">
+                            <button type="button" class="btn btn-default default-btn"
+                                onclick="getServaccDailyReport()">Submit</button>
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+
                 <ul class="nav nav-tabs reportees-tabs">
-                    <li class="active"><a data-toggle="tab" href="#reportees">Reportees</a></li>
+                    <li class="active"><a data-toggle="tab" href="#reportees">Non Reportees</a></li>
                     <li><a data-toggle="tab" href="#nonReportees">Non Reportees</a></li>
                 </ul>
 
@@ -84,23 +114,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/xlsx.full.min.js"></script>
 
-    <!-- <script src="admin/js/jquery.min.js"></script>
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css" />
-
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script> 
-
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" />
-    -->
 
     <style>
         .nav>li>a {
@@ -110,13 +123,24 @@
 
     <script src="/admin/js/admin.js"></script>
     <script>
+
+        const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const date = new Date();
+        let day = weekday[date.getDay()];
+        let prevousDate = day == 'Monday' ? new Date(date.setDate(date.getDate() - 2)).toISOString().substr(0, 10) : new Date(date.setDate(date.getDate() - 1)).toISOString().substr(0, 10);
+
+        $('#date').val(prevousDate);
+
         function getServaccDailyReport() {
+
             $('.loader-wrapper').removeClass('none');
-            console.log('getServaccDailyReport Executed');
             let param = {
                 method: 'getServaccDailyReport',
-                date: new Date()
+                date: new Date($('#date').val())
             };
+
+            console.log(param);
+
             axios
                 .post("/api", param)
                 .then((response) => {
@@ -126,24 +150,27 @@
 
                     for (let item of reporteesList) {
                         reporteesHtml.push(`<tr>
-                    <td>${item.zoneName}</td>
-                    <td>${item.RBM}</td>
-                    <td>${item.kamName}</td>    
-                    <!--<td>${item.EmpID}</td>-->
-                </tr>`);
+                        <td>${item.zoneName}</td>
+                        <td>${item.RBM}</td>
+                        <td>${item.kamName}</td>    
+                        <!--<td>${item.EmpID}</td>-->
+                    </tr>`);
                     }
 
                     for (let item of nonReporteesList) {
                         nonReporteesHtml.push(`<tr>
-                    <td>${item.zoneName}</td>
-                    <td>${item.RBM}</td>
-                    <td>${item.kamName}</td>    
-                    <!--<td>${item.EmpID}</td>-->
-                </tr>`);
-
-                        $('#reporteesList').html(reporteesHtml.join(''));
-                        $('#nonReporteesList').html(nonReporteesHtml.join(''));
+                        <td>${item.zoneName}</td>
+                        <td>${item.RBM}</td>
+                        <td>${item.kamName}</td>    
+                        <!--<td>${item.EmpID}</td>-->
+                    </tr>`);
                     }
+
+                    $('#reporteesList').html(reporteesHtml.join(''));
+                    $('#nonReporteesList').html(nonReporteesHtml.join(''));
+
+                    // console.log(reporteesHtml);
+                    // console.log(nonReporteesHtml);
 
                     $('.loader-wrapper').addClass('none');
 
