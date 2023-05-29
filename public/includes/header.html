@@ -1,5 +1,3 @@
-
-
 <!-- <ul class="nav navbar-nav navbar-right">
     Welcome11111: <div id='dvName'></div>
     Post: <div id='dvPost'></div>
@@ -12,51 +10,54 @@
     </li>
   </ul> -->
 
-  <nav class="navbar">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">
-          <img src="img/logo.png" alt="bsv logo" class="img-responsive" />
-        </a>
-        <h2 class="project-name project-top-name">
-          <img src="img/p2c.png" alt="p2c" class="img-response" />
-        </h2>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="user-name"><a href="#">Welcome, <span id="dvName"></span></a></li>
-          <li class="user-reports"><a href="/admin-dashbaord?isRbm=true">Reports</a></li>
-          
-          <li id="liLoginLogout">
-            <div onclick="logoutMe();"></div>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="img/logo.png" alt="bsv logo" class="img-responsive" />
+      </a>
+      <h2 class="project-name project-top-name">
+        <img src="img/p2c.png" alt="p2c" class="img-response" />
+      </h2>
+      <h2 class="project-name project-top-name">
+        <img src="img/seravacc.png" alt="p2c" class="img-response" />
+      </h2>
     </div>
-  </nav>
-  
-  <script>
-    $('.user-reports').hide();
-    function logoutMe() {
-      localStorage.setItem("userData", null);
-      localStorage.clear();
-      document.location.href = "/";
-    }
-    if (!localStorage.getItem("userData")) {
-      $("#liLoginLogout").html(" <a href='javascript:void(0);''>Login</a>");
-    } else {
-      $("#liLoginLogout").html(
-        //"<a href='javascript:void(0);' onclick='logoutMe();'>Logout</a>"
-        '<a href="javascript:void(0);" onclick="logoutMe();">Logout</a>'
-      );
-    }
-    
-    if(JSON.parse(localStorage.userData).userDetiails.post === 'RBM') {
-      $('.user-reports').show()
-    }
-  </script>
+    <div class="collapse navbar-collapse" id="myNavbar1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="user-name"><a href="#">Welcome, <span id="dvName"></span></a></li>
+        <li class="user-reports"><a href="/admin-dashbaord?isRbm=true">Reports</a></li>
+
+        <li id="liLoginLogout">
+          <div onclick="logoutMe();"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  $('.user-reports').hide();
+  function logoutMe() {
+    localStorage.setItem("userData", null);
+    localStorage.clear();
+    document.location.href = "/";
+  }
+  if (!localStorage.getItem("userData")) {
+    $("#liLoginLogout").html(" <a href='javascript:void(0);''>Login</a>");
+  } else {
+    $("#liLoginLogout").html(
+      //"<a href='javascript:void(0);' onclick='logoutMe();'>Logout</a>"
+      '<a href="javascript:void(0);" onclick="logoutMe();">Logout</a>'
+    );
+  }
+
+  if (JSON.parse(localStorage.userData).userDetiails.post === 'RBM') {
+    $('.user-reports').show()
+  }
+</script>
