@@ -313,6 +313,8 @@ function validateLogData() {
 
   console.log(param);
 
+  $('#saveBtn').prop('disabled', true);
+
   axios
     .post("/api", param)
     .then((response) => {
@@ -321,6 +323,7 @@ function validateLogData() {
         $('.thank-you-wrapper').removeClass('hide');
         $('.thank-you-wrapper').removeClass('hide');
       }
+      $('#saveBtn').prop('disabled', false);
 
     })
     .catch((err) => {
