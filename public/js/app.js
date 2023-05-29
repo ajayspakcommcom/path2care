@@ -140,7 +140,7 @@ function showlogDataForm(medId, name) {
       $('.strip-wrapper').addClass('none');
 
       //$('.target-wrapper').addClass('none');
-      $('.pressType-wrapper').addClass('none');
+      $('.pressType-wrapper').removeClass('none');
 
       break;
     case 'ASVS':
