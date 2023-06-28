@@ -130,6 +130,12 @@
                                     <th>Hospital</th>
                                     <th>City</th>
                                     <th>Zone</th>
+                                    <th>prescriptions</th>
+                                    <th>strips</th>
+                                    <th>TotalValue</th>
+                                    <th>arc</th>
+                                    <th>PrescriberType</th>
+                                    <th>Target</th>
                                 </tr>
                             </thead>
                             <!-- <tfoot>
@@ -249,7 +255,7 @@
             axios
                 .post("/api", param)
                 .then((response) => {
-                    //console.log(response);
+                    console.log(response);
 
                     ADMINDATA = [...response.data];
                     loadDropDown();
@@ -342,7 +348,13 @@
                         item.noOfVials,
                         item.hospitalName,
                         item.HospitalCity,
-                        item.zoneName
+                        item.zoneName,
+                        item.prescriptions,
+                        item.strips,
+                        item.TotalValue,
+                        item.arc,
+                        item.PrescriberType,
+                        item.Target
                     ]);
                 });
 
@@ -362,7 +374,13 @@
                             <th>${item.noOfVials}</th>
                             <th>${item.hospitalName}</th>
                             <th>${item.HospitalCity}</th>
-                            <th>${item.zoneName}</th>
+                            <th>${item.zoneName}</th>                            
+                            <th>${item.prescriptions}</th>
+                            <th>${item.strips}</th>
+                            <th>${item.TotalValue}</th>
+                            <th>${item.arc}</th>
+                            <th>${item.PrescriberType}</th>
+                            <th>${item.Target}</th>
                         </tr>
                         `
                     divArray.push(divData);
