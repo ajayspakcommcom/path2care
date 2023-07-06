@@ -240,8 +240,8 @@
 
             let param = {
                 method: 'loadDataForReport1',
-              //  empId: ($('#emp').val() == '0') ? ((localStorage.userData) ? JSON.parse(localStorage.userData).userDetiails.empId : null) : parseInt($('#emp').val()),
-                empId: ($('#emp').val() == '0') ?  null : parseInt($('#emp').val()),
+                //  empId: ($('#emp').val() == '0') ? ((localStorage.userData) ? JSON.parse(localStorage.userData).userDetiails.empId : null) : parseInt($('#emp').val()),
+                empId: ($('#emp').val() == '0') ? null : parseInt($('#emp').val()),
                 medId: ($('#cmbMedicine').val() == '0') ? null : parseInt($('#cmbMedicine').val()),
                 hospitalName: ($('#cmbHospitalList').val() == '0') ? null : ($('#cmbHospitalList').val()), //
                 hospitalCity: ($('#cmbHospitalCity').val() == '0') ? null : ($('#cmbHospitalCity').val()),
@@ -252,7 +252,7 @@
             axios
                 .post("/api", param)
                 .then((response) => {
-                    //console.log(response);
+                    console.log(response);
 
                     ADMINDATA = [...response.data];
                     loadDropDown();
@@ -336,7 +336,7 @@
                         item.Speciality ? item.Speciality : '---',
                         item.Indication ? item.Indication : '---',
                         //(item.OrderDate),
-                        (getDateMonthYear(item.OrderDate)),
+                        (getDateMonthYear(item.OrderDate[0])),
                         item.medicineName,
                         item.DoctorsName,
                         item.noOfPaitents,
@@ -356,7 +356,7 @@
                             <th>${item.Seller}</th>
                             <th>${item.Speciality ? item.Speciality : '---'}</th>
                             <th>${item.Indication ? item.Indication : '---'}</th>
-                            <th>${(getDateMonthYear(item.OrderDate))}</th>
+                            <th>${(getDateMonthYear(item.OrderDate[0]))}</th>
                             <th>${item.medicineName}</th>
                             <th>${item.DoctorsName}</th>
                             <th>${item.noOfPaitents}</th>
@@ -398,7 +398,7 @@
                 from = $("#from")
                     .datepicker({
                         //defaultDate: "+1w",
-                     //   changeMonth: true,
+                        //   changeMonth: true,
                         //numberOfMonths: 1,
                         dateFormat: "dd-M-yy"
                     })
@@ -406,8 +406,8 @@
                         to.datepicker("option", "minDate", getDate(this));
                     }),
                 to = $("#to").datepicker({
-                   // defaultDate: "+1w",
-                   // changeMonth: true,
+                    // defaultDate: "+1w",
+                    // changeMonth: true,
                     //numberOfMonths: 1,
                     dateFormat: "dd-M-yy"
                 })
