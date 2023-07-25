@@ -203,7 +203,8 @@
         }
 
         function getDateMonthYear(dt) {
-            let date = new Date(dt);
+            //console.log(dt)
+            let date = new Date(dt[0]);
             //console.log(`${date.getDate().toString()}-${date.getMonth().toString()}-${date.getFullYear().toString()}`);
             //return `${date.getDate().toString()} - ${date.getMonth().toString()} - ${date.getFullYear().toString()}`;
             return moment(date).format("LL");
