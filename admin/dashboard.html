@@ -256,7 +256,117 @@
             axios
                 .post("/api", param)
                 .then((response) => {
-                    console.log(response);
+
+                    // //report
+
+                    // const respData = response.data.map(item => {
+                    //     return {
+                    //         Seller: item.Seller,
+                    //         Speciality: item.Speciality[0],
+                    //         Indication: item.Indication[0],
+                    //         OrderDate: item.OrderDate[0],
+                    //         medicineName: item.medicineName,
+                    //         DoctorsName: item.DoctorsName[0],
+                    //         noOfPaitents: item.noOfPaitents,
+                    //         noOfVials: item.noOfVials,
+                    //         hospitalName: item.hospitalCity,
+                    //         HospitalCity: item.HospitalName[0],
+                    //         zoneName: item.zoneName,
+                    //         EmpID: item.EmpID[0],
+                    //         PortalName: item.PortalName,
+                    //         MedicineUsageId: item.MedicineUsageId,
+                    //         medID: item.medID,
+                    //         NoOfPatients: item.NoOfPatients,
+                    //         DoctorsID: item.DoctorsID,
+                    //         NoOfVials: item.NoOfVials,
+                    //         HospitalName: item.HospitalName,
+                    //         CreatedDate: item.CreatedDate,
+                    //         prescriptions: item.prescriptions,
+                    //         strips: item.strips,
+                    //         TotalValue: item.TotalValue,
+                    //         arc: item.arc,
+                    //         PrescriberType: item.prescriptions,
+                    //         Target: item.Target,
+                    //         PapValue: item.PapValue
+                    //     }
+                    // });
+
+                    // const groupByKey = (array, key) => {
+                    //     return array.reduce((result, currentValue) => {
+                    //         (result[currentValue[key]] = result[currentValue[key]] || []).push(currentValue);
+                    //         return result;
+                    //     }, {});
+                    // }
+
+                    // const getSum = (arr, property) => {
+                    //     return arr.reduce((accumulator, object) => {
+                    //         return accumulator + object[property];
+                    //     }, 0);
+                    // };
+
+                    // const outputData = [];
+
+                    // //console.log(groupedDataByEmpId);
+
+                    // for (var key in groupedDataByEmpId) {
+
+                    //     const groupedByMedId = groupByKey(groupedDataByEmpId[key], 'medID');
+
+                    //     const medicineObj = [];
+                    //     for (var item in groupedByMedId) {
+                    //         totalVials = getSum(groupedByMedId[item], 'noOfVials');
+                    //         medicineObj.push({ medName: groupedByMedId[item][0].medicineName, totalVials: totalVials });
+                    //     }
+
+
+                    //     const obj = {
+                    //         empId: key,
+                    //         kam: groupedDataByEmpId[key][0].Seller,
+                    //         medicineData: medicineObj,
+                    //         noOfReport: groupedDataByEmpId[key].length
+                    //     };
+
+                    //     outputData.push({ ...obj });
+                    //     //console.log('====================================================================================');
+                    // }
+
+                    // console.log(outputData);
+
+                    // let showHtml = '';
+
+                    // for (const item of outputData) {
+                    //     let medData = '';
+                    //     for (const itemObj of item.medicineData) {
+                    //         medData += `(${itemObj.medName} - ${itemObj.totalVials})`;
+                    //     }
+
+                    //     showHtml += `
+                    //                     <tr>
+                    //                         <td>${item.kam}</td>
+                    //                         <td>${item.noOfReport}</td>
+                    //                         <td>${medData}</td>                    
+                    //                     </tr>
+                    //                 `;
+                    // }
+
+                    // console.log(showHtml)
+
+                    // const table = `
+                    //     <table>
+                    //     <tr>
+                    //         <th>Kam</th>
+                    //         <th>noOfReport</th>
+                    //         <th>Medicine</th>
+                    //     </tr>
+                    //     ${showHtml}
+                    //     </table>
+                    //     `;
+
+                    // console.log(table);
+
+                    // document.getElementById('showhtml').innerHTML = table
+                    // //report
+
 
                     ADMINDATA = [...response.data];
                     loadDropDown();
