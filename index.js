@@ -44,7 +44,7 @@ const config = {
   user: "hae",
   password: "Spak@12345",
   port: 1433,
-  database: "Serevacc",
+  database: "Seravacc",
   pool: {
     max: 10,
     min: 0,
