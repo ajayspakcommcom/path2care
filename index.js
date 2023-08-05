@@ -20,22 +20,39 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
 
+// old
+// const config = {
+//   server: "P3NWPLSK12SQL-v15.shr.prod.phx3.secureserver.net",
+//   user: "spakDb",
+//   password: "Spak@123-",
+//   port: 1433,
+//   database: "bsvDb",
+//   pool: {
+//     max: 10,
+//     min: 0,
+//     idleTimeoutMillis: 30000,
+//   },
+//   options: {
+//     encrypt: true,
+//     trustServerCertificate: true,
+//   },
+// };
 
-
+// new 
 const config = {
-  server: "P3NWPLSK12SQL-v15.shr.prod.phx3.secureserver.net",
-  user: "spakDb",
-  password: "Spak@123-",
+  server: "http://n1nwplsk12sql-v01.shr.prod.ams1.secureserver.net",
+  user: "hae",
+  password: "Spak@12345",
   port: 1433,
-  database: "bsvDb",
+  database: "Serevacc",
   pool: {
     max: 10,
     min: 0,
     idleTimeoutMillis: 30000,
   },
   options: {
-    encrypt: true, // for azure
-    trustServerCertificate: true, // change to true for local dev / self-signed certs
+    encrypt: true,
+    trustServerCertificate: true,
   },
 };
 
