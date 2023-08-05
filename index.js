@@ -40,7 +40,7 @@ app.use(bodyParser.raw());
 
 // new 
 const config = {
-  server: "http://n1nwplsk12sql-v01.shr.prod.ams1.secureserver.net",
+  server: "n1nwplsk12sql-v01.shr.prod.ams1.secureserver.net",
   user: "hae",
   password: "Spak@12345",
   port: 1433,
