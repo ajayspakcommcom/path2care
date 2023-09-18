@@ -200,9 +200,6 @@ function validateLogData() {
     return false;
   }
 
-
-
-
   if ($("#txtPaitentName").val() === "") {
     alert("please enter name of the paitent");
     $("#txtPaitentName").focus();
